@@ -6,8 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion></ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{658DA84D-AD6C-414A-9333-B89232911187}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -22,8 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -209,6 +207,24 @@
     <Content Include="src\app\about\about-page.component.scss">
       <DependentUpon>about-page.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\admin\admin-page.component.html">
+      <DependentUpon>admin-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\admin\admin-page.component.scss">
+      <DependentUpon>admin-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\admin\blog\article-edit-page.component.html">
+      <DependentUpon>article-edit-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\admin\blog\article-edit-page.component.scss">
+      <DependentUpon>article-edit-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\admin\digital-assets\upload.component.html">
+      <DependentUpon>upload.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\admin\digital-assets\upload.component.scss">
+      <DependentUpon>upload.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\app.component.html">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
@@ -270,6 +286,7 @@
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
+    <TypeScriptCompile Include="src\app\shared\auth-guard.service.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
@@ -291,6 +308,16 @@
     <TypeScriptCompile Include="src\app\about\about-page.component.ts" />
     <TypeScriptCompile Include="src\app\about\about.module.ts" />
     <TypeScriptCompile Include="src\app\about\index.ts" />
+    <TypeScriptCompile Include="src\app\admin\admin-page.component.ts" />
+    <TypeScriptCompile Include="src\app\admin\digital-assets\upload.component.ts" />
+    <TypeScriptCompile Include="src\app\admin\blog\article-edit-page.component.ts" />
+    <TypeScriptCompile Include="src\app\admin\blog\article.service.ts" />
+    <TypeScriptCompile Include="src\app\admin\blog\index.ts" />
+    <TypeScriptCompile Include="src\app\admin\blog\article.model.ts" />
+    <TypeScriptCompile Include="src\app\admin\catalog\index.ts" />
+    <TypeScriptCompile Include="src\app\admin\catalog\product.model.ts" />
+    <TypeScriptCompile Include="src\app\admin\catalog\product.service.ts" />
+    <TypeScriptCompile Include="src\app\shared\api.service.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -310,8 +337,7 @@
           <IISUrl>http://localhost:56622/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
