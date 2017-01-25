@@ -4,5 +4,5 @@
 
 export const environment = {
     baseUrl:"",
-    production: false
+    production: true
 };

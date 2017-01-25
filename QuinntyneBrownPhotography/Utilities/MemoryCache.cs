@@ -1,11 +1,11 @@
 using System;
 using System.Runtime.Caching;
 
-namespace QuinntyneBrownPhotography.Services
+namespace QuinntyneBrownPhotography.Utilities
 {
     public class MemoryCache : Cache
     {
-        private static volatile QuinntyneBrownPhotography.Services.MemoryCache _current = null;
+        private static volatile QuinntyneBrownPhotography.Utilities.MemoryCache _current = null;
         private static System.Runtime.Caching.MemoryCache _cache = System.Runtime.Caching.MemoryCache.Default;
         private static object _sync = new object();
 

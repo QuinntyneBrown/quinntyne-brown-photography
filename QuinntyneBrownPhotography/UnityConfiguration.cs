@@ -1,5 +1,5 @@
 using QuinntyneBrownPhotography.Security;
-using QuinntyneBrownPhotography.Services;
+using QuinntyneBrownPhotography.Utilities;
 using QuinntyneBrownPhotography.Utilities;
 using Microsoft.Practices.Unity;
 using MediatR;

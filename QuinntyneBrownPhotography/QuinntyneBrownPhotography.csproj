@@ -214,6 +214,10 @@
     <Compile Include="Features\DigitalAssets\UploadHandlers\FileMultipartFormDataStreamProvider.cs" />
     <Compile Include="Features\DigitalAssets\UploadHandlers\InMemoryMultipartFormDataStreamProvider.cs" />
     <Compile Include="Features\DigitalAssets\DigitalAssetApiModel.cs" />
+    <Compile Include="Data\Models\User.cs" />
+    <Compile Include="Data\Models\Role.cs" />
+    <Compile Include="Features\DigitalAssets\ServeQuery.cs" />
+    <Compile Include="Features\DigitalAssets\UploadCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

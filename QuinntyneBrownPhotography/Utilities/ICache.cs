@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace QuinntyneBrownPhotography.Services
+namespace QuinntyneBrownPhotography.Utilities
 {
     public interface ICache
     {

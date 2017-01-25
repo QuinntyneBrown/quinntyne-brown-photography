@@ -9,7 +9,7 @@ using Microsoft.Owin.Cors;
 using System;
 using QuinntyneBrownPhotography.Utilities;
 using QuinntyneBrownPhotography.Security;
-using QuinntyneBrownPhotography.Services;
+using QuinntyneBrownPhotography.Utilities;
 using QuinntyneBrownPhotography.Filters;
 using MediatR;
 
