@@ -42,6 +42,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MediatR, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediatR.2.1.0\lib\net45\MediatR.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
       <Private>True</Private>
@@ -175,28 +179,27 @@
     <Compile Include="ApiConfiguration.cs" />
     <Compile Include="Features\Customers\CustomerController.cs" />
     <Compile Include="Filters\WebApiUnityActionFilterProvider.cs" />
-    <Compile Include="Security\JwtOptions.cs" />
-    <Compile Include="Security\JwtWriterFormat.cs" />
-    <Compile Include="Security\OAuthOptions.cs" />
-    <Compile Include="Security\OAuthProvider.cs" />
-    <Compile Include="Security\AuthConfiguration.cs" />
-    <Compile Include="Security\IAuthConfiguration.cs" />
     <Compile Include="Data\QuinntyneBrownPhotographyDataContext.cs" />
-    <Compile Include="Security\RegistrationRequestDto.cs" />
-    <Compile Include="Security\RegistrationResponseDto.cs" />
-    <Compile Include="Security\TokenDto.cs" />
     <Compile Include="Filters\HandleError.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Data\Models\Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AuthConfiguration.cs" />
+    <Compile Include="Security\AuthenticateRequest.cs" />
+    <Compile Include="Security\AuthenticateResponse.cs" />
+    <Compile Include="Security\EncryptionService.cs" />
+    <Compile Include="Security\GetClaimsForUserRequest.cs" />
+    <Compile Include="Security\GetClaimsForUserResponse.cs" />
+    <Compile Include="Security\IAuthConfiguration.cs" />
+    <Compile Include="Security\IEncryptionService.cs" />
+    <Compile Include="Security\JwtOptions.cs" />
+    <Compile Include="Security\JwtWriterFormat.cs" />
+    <Compile Include="Security\OAuthOptions.cs" />
+    <Compile Include="Security\OAuthProvider.cs" />
     <Compile Include="Utilities\Cache.cs" />
     <Compile Include="Utilities\CacheProvider.cs" />
-    <Compile Include="Security\EncryptionService.cs" />
     <Compile Include="Utilities\ICache.cs" />
     <Compile Include="Utilities\ICacheProvider.cs" />
-    <Compile Include="Security\IdentityService.cs" />
-    <Compile Include="Security\IEncryptionService.cs" />
-    <Compile Include="Security\IIdentityService.cs" />
     <Compile Include="Utilities\MemoryCache.cs" />
     <Compile Include="UnityConfiguration.cs" />
     <Compile Include="Utilities\ILogger.cs" />
@@ -205,6 +208,12 @@
     <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Utilities\LoggerFactory.cs" />
     <Compile Include="Features\Customers\CustomerApiModel.cs" />
+    <Compile Include="Data\Models\DigitalAsset.cs" />
+    <Compile Include="Features\DigitalAssets\DigitalAssetController.cs" />
+    <Compile Include="Features\DigitalAssets\UploadHandlers\StreamHelper.cs" />
+    <Compile Include="Features\DigitalAssets\UploadHandlers\FileMultipartFormDataStreamProvider.cs" />
+    <Compile Include="Features\DigitalAssets\UploadHandlers\InMemoryMultipartFormDataStreamProvider.cs" />
+    <Compile Include="Features\DigitalAssets\DigitalAssetApiModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

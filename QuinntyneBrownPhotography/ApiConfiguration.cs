@@ -11,6 +11,7 @@ using QuinntyneBrownPhotography.Utilities;
 using QuinntyneBrownPhotography.Security;
 using QuinntyneBrownPhotography.Services;
 using QuinntyneBrownPhotography.Filters;
+using MediatR;
 
 namespace QuinntyneBrownPhotography
 {
@@ -19,7 +20,7 @@ namespace QuinntyneBrownPhotography
         public static void Install(HttpConfiguration config, IAppBuilder app)
         {
             WebApiUnityActionFilterProvider.RegisterFilterProviders(config);
-
+            var container = UnityConfiguration.GetContainer();
             app.MapSignalR();
 
 
@@ -29,14 +30,14 @@ namespace QuinntyneBrownPhotography
 
             config.SuppressHostPrincipal();
 
-            IIdentityService identityService = UnityConfiguration.GetContainer().Resolve<IIdentityService>();
+            var mediator = container.Resolve<IMediator>();
             Lazy<IAuthConfiguration> lazyAuthConfiguration = UnityConfiguration.GetContainer().Resolve<Lazy<IAuthConfiguration>>();
 
             config
                 .EnableSwagger(c => c.SingleApiVersion("v1", "QuinntyneBrownPhotography"))
                 .EnableSwaggerUi();
 
-            app.UseOAuthAuthorizationServer(new OAuthOptions(lazyAuthConfiguration, identityService));
+            app.UseOAuthAuthorizationServer(new OAuthOptions(lazyAuthConfiguration, mediator));
 
             app.UseJwtBearerAuthentication(new JwtOptions(lazyAuthConfiguration));
 
@@ -49,11 +50,6 @@ namespace QuinntyneBrownPhotography
             config.Formatters.Remove(config.Formatters.XmlFormatter);
             config.Formatters.JsonFormatter.SerializerSettings = jSettings;
             config.MapHttpAttributeRoutes();
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-                );
         }
     }
 }

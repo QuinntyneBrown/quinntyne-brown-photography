@@ -1,20 +1,19 @@
-using QuinntyneBrownPhotography.Security;
-using QuinntyneBrownPhotography.Services;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using System;
+using MediatR;
 
 namespace QuinntyneBrownPhotography.Security
 {
     public class OAuthOptions : OAuthAuthorizationServerOptions
     {
-        public OAuthOptions(Lazy<IAuthConfiguration> lazyAuthConfiguration, IIdentityService identityService)
+        public OAuthOptions(Lazy<IAuthConfiguration> lazyAuthConfiguration, IMediator mediator)
         {
             _lazyAuthConfiguration = lazyAuthConfiguration;
             TokenEndpointPath = new PathString(_authConfiguration.TokenPath);
             AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(_authConfiguration.ExpirationMinutes);
             AccessTokenFormat = new JwtWriterFormat(lazyAuthConfiguration, this);
-            Provider = new OAuthProvider(lazyAuthConfiguration, identityService);
+            Provider = new OAuthProvider(lazyAuthConfiguration, mediator);
             AllowInsecureHttp = true;
         }
 

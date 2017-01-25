@@ -1,18 +1,16 @@
 namespace QuinntyneBrownPhotography.Migrations
 {
-    using System;
-    using System.Data.Entity;
+    using Data;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<QuinntyneBrownPhotography.Data.QuinntyneBrownPhotographyDataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<QuinntyneBrownPhotographyDataContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(QuinntyneBrownPhotography.Data.QuinntyneBrownPhotographyDataContext context)
+        protected override void Seed(QuinntyneBrownPhotographyDataContext context)
         {
 
         }
