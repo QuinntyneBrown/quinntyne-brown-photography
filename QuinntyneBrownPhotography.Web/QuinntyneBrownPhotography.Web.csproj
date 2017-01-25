@@ -202,6 +202,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="src\app\app.component.html">
+      <DependentUpon>app.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\app.component.scss">
+      <DependentUpon>app.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\landing\landing-page.component.html">
+      <DependentUpon>landing-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\landing\landing-page.component.scss">
+      <DependentUpon>landing-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="tsconfig.json" />
+    <Content Include="src\styles\_breakpoints.scss" />
+    <Content Include="src\styles\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -228,9 +243,22 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\app\admin\" />
-    <Folder Include="src\app\landing\" />
     <Folder Include="src\app\login\" />
-    <Folder Include="src\app\shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\environment.ts" />
+    <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\vendor.ts" />
+    <TypeScriptCompile Include="src\app\shared\shared.module.ts" />
+    <TypeScriptCompile Include="src\app\shared\index.ts" />
+    <TypeScriptCompile Include="src\app\landing\landing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\landing\index.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
