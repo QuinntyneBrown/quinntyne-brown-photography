@@ -6,38 +6,35 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Data.Entity;
 
-namespace QuinntyneBrownPhotography.Features.DigitalAssets
+namespace QuinntyneBrownPhotography.Features.Customers
 {
-    public class ServeQuery
+    public class GetByIdQuery
     {
-        public class ServeRequest : IAsyncRequest<ServeResponse>
+        public class GetByIdRequest : IAsyncRequest<GetByIdResponse>
         {
-            public ServeRequest()
+            public GetByIdRequest()
             {
 
             }
         }
 
-        public class ServeResponse
+        public class GetByIdResponse
         {
-            public ServeResponse()
+            public GetByIdResponse()
             {
 
             }
-
-            public byte[] Bytes { get; set; }
-            public string ContentType { get; set; }
         }
 
-        public class ServeHandler : IAsyncRequestHandler<ServeRequest, ServeResponse>
+        public class GetByIdHandler : IAsyncRequestHandler<GetByIdRequest, GetByIdResponse>
         {
-            public ServeHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
+            public GetByIdHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
             {
                 _dataContext = dataContext;
                 _cache = cache;
             }
 
-            public async Task<ServeResponse> Handle(ServeRequest request)
+            public async Task<GetByIdResponse> Handle(GetByIdRequest request)
             {
 				throw new System.NotImplementedException();
             }

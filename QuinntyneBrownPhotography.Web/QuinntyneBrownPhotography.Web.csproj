@@ -29,6 +29,7 @@
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
     <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
     <TypeScritModuleResolution>Classic</TypeScritModuleResolution>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -202,17 +203,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="src\app\about\about-page.component.html">
+      <DependentUpon>about-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\about\about-page.component.scss">
+      <DependentUpon>about-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\app.component.html">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\blog\article-page.component.html">
+      <DependentUpon>article-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\blog\article-page.component.scss">
+      <DependentUpon>article-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\landing\landing-page.component.html">
       <DependentUpon>landing-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\landing\landing-page.component.scss">
       <DependentUpon>landing-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\login\login-page.component.html">
+      <DependentUpon>login-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\login\login-page.component.scss">
+      <DependentUpon>login-page.component.ts</DependentUpon>
     </Content>
     <Content Include="tsconfig.json" />
     <Content Include="src\styles\_breakpoints.scss" />
@@ -226,6 +245,8 @@
     <Content Include="package.json" />
     <Content Include="webpack.config.js" />
     <Content Include="typings.json" />
+    <Content Include="src\app\catalog\product-page.component.scss" />
+    <Content Include="src\app\catalog\product-page.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -241,10 +262,7 @@
       <Name>QuinntyneBrownPhotography</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\app\admin\" />
-    <Folder Include="src\app\login\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <TypeScriptCompile Include="src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
@@ -259,6 +277,20 @@
     <TypeScriptCompile Include="src\app\shared\index.ts" />
     <TypeScriptCompile Include="src\app\landing\landing-page.component.ts" />
     <TypeScriptCompile Include="src\app\landing\index.ts" />
+    <TypeScriptCompile Include="src\app\admin\admin.module.ts" />
+    <TypeScriptCompile Include="src\app\admin\index.ts" />
+    <TypeScriptCompile Include="src\app\landing\landing.module.ts" />
+    <TypeScriptCompile Include="src\app\login\login-page.component.ts" />
+    <TypeScriptCompile Include="src\app\login\login.module.ts" />
+    <TypeScriptCompile Include="src\app\login\index.ts" />
+    <TypeScriptCompile Include="src\app\blog\article-page.component.ts" />
+    <TypeScriptCompile Include="src\app\blog\article.module.ts" />
+    <TypeScriptCompile Include="src\app\blog\index.ts" />
+    <TypeScriptCompile Include="src\app\catalog\product-page.component.ts" />
+    <TypeScriptCompile Include="src\app\catalog\index.ts" />
+    <TypeScriptCompile Include="src\app\about\about-page.component.ts" />
+    <TypeScriptCompile Include="src\app\about\about.module.ts" />
+    <TypeScriptCompile Include="src\app\about\index.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

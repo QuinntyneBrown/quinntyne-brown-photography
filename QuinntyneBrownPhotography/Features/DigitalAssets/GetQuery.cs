@@ -8,36 +8,33 @@ using System.Data.Entity;
 
 namespace QuinntyneBrownPhotography.Features.DigitalAssets
 {
-    public class ServeQuery
+    public class GetQuery
     {
-        public class ServeRequest : IAsyncRequest<ServeResponse>
+        public class GetRequest : IAsyncRequest<GetResponse>
         {
-            public ServeRequest()
+            public GetRequest()
             {
 
             }
         }
 
-        public class ServeResponse
+        public class GetResponse
         {
-            public ServeResponse()
+            public GetResponse()
             {
 
             }
-
-            public byte[] Bytes { get; set; }
-            public string ContentType { get; set; }
         }
 
-        public class ServeHandler : IAsyncRequestHandler<ServeRequest, ServeResponse>
+        public class GetHandler : IAsyncRequestHandler<GetRequest, GetResponse>
         {
-            public ServeHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
+            public GetHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
             {
                 _dataContext = dataContext;
                 _cache = cache;
             }
 
-            public async Task<ServeResponse> Handle(ServeRequest request)
+            public async Task<GetResponse> Handle(GetRequest request)
             {
 				throw new System.NotImplementedException();
             }

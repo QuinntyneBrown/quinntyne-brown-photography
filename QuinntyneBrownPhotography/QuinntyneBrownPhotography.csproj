@@ -177,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiConfiguration.cs" />
+    <Compile Include="Features\Catalog\ProductController.cs" />
     <Compile Include="Features\Customers\CustomerController.cs" />
     <Compile Include="Filters\WebApiUnityActionFilterProvider.cs" />
     <Compile Include="Data\QuinntyneBrownPhotographyDataContext.cs" />
@@ -218,15 +219,30 @@
     <Compile Include="Data\Models\Role.cs" />
     <Compile Include="Features\DigitalAssets\ServeQuery.cs" />
     <Compile Include="Features\DigitalAssets\UploadCommand.cs" />
+    <Compile Include="Features\DigitalAssets\UpdateCommand.cs" />
+    <Compile Include="Features\DigitalAssets\GetQuery.cs" />
+    <Compile Include="Features\DigitalAssets\GetByIdQuery.cs" />
+    <Compile Include="Features\DigitalAssets\GetByNameQuery.cs" />
+    <Compile Include="Data\Models\Article.cs" />
+    <Compile Include="Features\Customers\GetByIdQuery.cs" />
+    <Compile Include="Features\Blog\ArticleApiModel.cs" />
+    <Compile Include="Features\Blog\ArticleController.cs" />
+    <Compile Include="Data\Models\Author.cs" />
+    <Compile Include="Data\Models\Avatar.cs" />
+    <Compile Include="Features\Blog\AuthorApiModel.cs" />
+    <Compile Include="Features\Blog\TagApiModel.cs" />
+    <Compile Include="Features\Blog\AvatarApiModel.cs" />
+    <Compile Include="Data\Models\Tag.cs" />
+    <Compile Include="Data\Models\Product.cs" />
+    <Compile Include="Features\Catalog\ProductApiModel.cs" />
+    <Compile Include="Data\Models\ProductCategory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\DigitalAssets\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

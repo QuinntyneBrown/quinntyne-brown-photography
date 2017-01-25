@@ -14,6 +14,7 @@ namespace QuinntyneBrownPhotography.Data
         }
 
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<DigitalAsset> DigitalAssets { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -13,7 +13,7 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
         public DateTime? FileModified { get; set; }
         public long? Size { get; set; }
         public string ContentType { get; set; }
-        public string RelativePath { get { return $"api/digitalasset/serve?uniqueid={UniqueId}"; } }
+        public string RelativePath { get; set; }
         public Byte[] Bytes { get; set; } = new byte[0];
         public Guid? UniqueId { get; set; } = Guid.NewGuid();
 
@@ -24,5 +24,8 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
             model.Id = digitalAsset.Id;
             return model;
         }
+
+        public static DigitalAssetApiModel FromDigitalAsset(DigitalAsset digitalAsset)
+            => FromDigitalAsset<DigitalAssetApiModel>(digitalAsset);
     }
 }
