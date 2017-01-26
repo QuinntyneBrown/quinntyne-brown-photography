@@ -242,13 +242,20 @@
     <Compile Include="Features\Contacts\AddContactMessageCommand.cs" />
     <Compile Include="Features\Contacts\ContactApiModel.cs" />
     <Compile Include="Features\Contacts\ContactMessageApiModel.cs" />
+    <Compile Include="Features\Catalog\GetBySlugQuery.cs" />
+    <Compile Include="Data\Models\Contest.cs" />
+    <Compile Include="Data\Models\ContestEntry.cs" />
+    <Compile Include="Migrations\UserConfiguration.cs" />
+    <Compile Include="Migrations\RoleConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\Contests\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

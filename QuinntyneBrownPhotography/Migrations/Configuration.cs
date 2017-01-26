@@ -12,7 +12,8 @@ namespace QuinntyneBrownPhotography.Migrations
 
         protected override void Seed(QuinntyneBrownPhotographyDataContext context)
         {
-
+            UserConfiguration.Seed(context);
+            RoleConfiguration.Seed(context);
         }
     }
 }

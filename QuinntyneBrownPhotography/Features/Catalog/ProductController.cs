@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using MediatR;
+using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace QuinntyneBrownPhotography.Features.Catalog
 {
@@ -6,9 +8,18 @@ namespace QuinntyneBrownPhotography.Features.Catalog
     [RoutePrefix("api/product")]
     public class ProductController: ApiController
     {
-        public ProductController()
+        public ProductController(IMediator mediator)
         {
-
+            _mediator = mediator;
         }
+
+        [HttpGet]
+        [Route("getbyslug")]
+        public async Task<IHttpActionResult> GetBySlug(GetBySlugQuery.GetBySlugRequest request)
+        {
+            return Ok(await _mediator.SendAsync(request));
+        }
+
+        protected readonly IMediator _mediator;
     }
 }
