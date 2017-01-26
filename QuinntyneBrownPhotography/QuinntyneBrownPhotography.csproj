@@ -237,6 +237,11 @@
     <Compile Include="Features\Catalog\ProductApiModel.cs" />
     <Compile Include="Data\Models\ProductCategory.cs" />
     <Compile Include="Features\Blog\GetBySlugQuery.cs" />
+    <Compile Include="Data\Models\Contact.cs" />
+    <Compile Include="Features\Contacts\ContactController.cs" />
+    <Compile Include="Features\Contacts\AddContactMessageCommand.cs" />
+    <Compile Include="Features\Contacts\ContactApiModel.cs" />
+    <Compile Include="Features\Contacts\ContactMessageApiModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

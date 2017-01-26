@@ -219,11 +219,11 @@
     <Content Include="src\app\admin\blog\article-edit-page.component.scss">
       <DependentUpon>article-edit-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\admin\digital-assets\upload.component.html">
-      <DependentUpon>upload.component.ts</DependentUpon>
+    <Content Include="src\app\admin\digital-assets\upload-page.component.html">
+      <DependentUpon>upload-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\admin\digital-assets\upload.component.scss">
-      <DependentUpon>upload.component.ts</DependentUpon>
+    <Content Include="src\app\admin\digital-assets\upload-page.component.scss">
+      <DependentUpon>upload-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\app.component.html">
       <DependentUpon>app.component.ts</DependentUpon>
@@ -242,6 +242,12 @@
     </Content>
     <Content Include="src\app\catalog\product-page.component.scss">
       <DependentUpon>product-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\contact\contact-page.component.html">
+      <DependentUpon>contact-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\contact\contact-page.component.scss">
+      <DependentUpon>contact-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\landing\landing-page.component.html">
       <DependentUpon>landing-page.component.ts</DependentUpon>
@@ -314,7 +320,6 @@
     <TypeScriptCompile Include="src\app\about\about.module.ts" />
     <TypeScriptCompile Include="src\app\about\index.ts" />
     <TypeScriptCompile Include="src\app\admin\admin-page.component.ts" />
-    <TypeScriptCompile Include="src\app\admin\digital-assets\upload.component.ts" />
     <TypeScriptCompile Include="src\app\admin\blog\article-edit-page.component.ts" />
     <TypeScriptCompile Include="src\app\admin\blog\article.service.ts" />
     <TypeScriptCompile Include="src\app\admin\blog\index.ts" />
@@ -324,6 +329,11 @@
     <TypeScriptCompile Include="src\app\admin\catalog\product.service.ts" />
     <TypeScriptCompile Include="src\app\shared\api.service.ts" />
     <TypeScriptCompile Include="src\app\catalog\catalog.module.ts" />
+    <TypeScriptCompile Include="src\app\admin\digital-assets\index.ts" />
+    <TypeScriptCompile Include="src\app\admin\digital-assets\upload-page.component.ts" />
+    <TypeScriptCompile Include="src\app\contact\contact-page.component.ts" />
+    <TypeScriptCompile Include="src\app\contact\contact.module.ts" />
+    <TypeScriptCompile Include="src\app\contact\index.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
