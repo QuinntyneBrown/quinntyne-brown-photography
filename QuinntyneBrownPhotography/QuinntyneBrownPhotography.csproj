@@ -236,6 +236,7 @@
     <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Features\Catalog\ProductApiModel.cs" />
     <Compile Include="Data\Models\ProductCategory.cs" />
+    <Compile Include="Features\Blog\GetBySlugQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

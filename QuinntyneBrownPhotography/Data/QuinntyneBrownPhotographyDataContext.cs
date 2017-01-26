@@ -13,6 +13,7 @@ namespace QuinntyneBrownPhotography.Data
             Configuration.AutoDetectChangesEnabled = true;
         }
 
+        public DbSet<Article> Articles { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<DigitalAsset> DigitalAssets { get; set; }
 

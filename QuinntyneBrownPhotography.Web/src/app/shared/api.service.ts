@@ -7,7 +7,15 @@ import { Observable } from "rxjs";
 export class ApiService {
     constructor(private _http: Http) { }
 
-
+    public getArticleBySlug(options: { slug: string }) {
+        return this._http
+            .get(`${this._baseUrl}/api/article/getBySlug?slug=${options.slug}`)
+            .map(data => data.json())
+            .catch(err => {
+                return Observable.of(false);
+            });
+    }
+    
     public get _baseUrl() { return environment.baseUrl; }
 
 }

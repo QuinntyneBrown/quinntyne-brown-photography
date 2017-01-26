@@ -237,6 +237,12 @@
     <Content Include="src\app\blog\article-page.component.scss">
       <DependentUpon>article-page.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\catalog\product-page.component.html">
+      <DependentUpon>product-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\catalog\product-page.component.scss">
+      <DependentUpon>product-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\landing\landing-page.component.html">
       <DependentUpon>landing-page.component.ts</DependentUpon>
     </Content>
@@ -261,8 +267,6 @@
     <Content Include="package.json" />
     <Content Include="webpack.config.js" />
     <Content Include="typings.json" />
-    <Content Include="src\app\catalog\product-page.component.scss" />
-    <Content Include="src\app\catalog\product-page.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -287,6 +291,7 @@
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="src\app\shared\auth-guard.service.ts" />
+    <TypeScriptCompile Include="src\app\shared\current-user.service.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
@@ -318,6 +323,7 @@
     <TypeScriptCompile Include="src\app\admin\catalog\product.model.ts" />
     <TypeScriptCompile Include="src\app\admin\catalog\product.service.ts" />
     <TypeScriptCompile Include="src\app\shared\api.service.ts" />
+    <TypeScriptCompile Include="src\app\catalog\catalog.module.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
