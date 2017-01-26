@@ -9,27 +9,27 @@ using System.Data.Entity;
 
 namespace QuinntyneBrownPhotography.Features.Polls
 {
-    public class AddOrUpdateCommand
+    public class AddOrUpdatePollCommand
     {
-        public class AddOrUpdateRequest : IAsyncRequest<AddOrUpdateResponse>
+        public class AddOrUpdatePollRequest : IAsyncRequest<AddOrUpdatePollResponse>
         {
             public PollApiModel Poll { get; set; }
         }
 
-        public class AddOrUpdateResponse
+        public class AddOrUpdatePollResponse
         {
 
         }
 
-        public class AddOrUpdateHandler : IAsyncRequestHandler<AddOrUpdateRequest, AddOrUpdateResponse>
+        public class AddOrUpdatePollHandler : IAsyncRequestHandler<AddOrUpdatePollRequest, AddOrUpdatePollResponse>
         {
-            public AddOrUpdateHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
+            public AddOrUpdatePollHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
             {
                 _dataContext = dataContext;
                 _cache = cache;
             }
 
-            public async Task<AddOrUpdateResponse> Handle(AddOrUpdateRequest request)
+            public async Task<AddOrUpdatePollResponse> Handle(AddOrUpdatePollRequest request)
             {
                 var entity = await _dataContext.Polls
                     .SingleOrDefaultAsync(x => x.Id == request.Poll.Id && x.IsDeleted == false);
@@ -37,7 +37,7 @@ namespace QuinntyneBrownPhotography.Features.Polls
                 entity.Name = request.Poll.Name;
                 await _dataContext.SaveChangesAsync();
 
-                return new AddOrUpdateResponse()
+                return new AddOrUpdatePollResponse()
                 {
 
                 };
