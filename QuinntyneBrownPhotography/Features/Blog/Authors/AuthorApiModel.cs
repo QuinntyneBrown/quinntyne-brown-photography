@@ -1,6 +1,6 @@
 using QuinntyneBrownPhotography.Data.Models;
 
-namespace QuinntyneBrownPhotography.Features.Blog
+namespace QuinntyneBrownPhotography.Features.Blog.Authors
 {
     public class AuthorApiModel
     {        

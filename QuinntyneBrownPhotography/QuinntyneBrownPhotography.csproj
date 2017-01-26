@@ -225,13 +225,13 @@
     <Compile Include="Features\DigitalAssets\GetByNameQuery.cs" />
     <Compile Include="Data\Models\Article.cs" />
     <Compile Include="Features\Customers\GetByIdQuery.cs" />
-    <Compile Include="Features\Blog\ArticleApiModel.cs" />
-    <Compile Include="Features\Blog\ArticleController.cs" />
+    <Compile Include="Features\Blog\Articles\ArticleApiModel.cs" />
+    <Compile Include="Features\Blog\Articles\ArticleController.cs" />
     <Compile Include="Data\Models\Author.cs" />
     <Compile Include="Data\Models\Avatar.cs" />
-    <Compile Include="Features\Blog\AuthorApiModel.cs" />
+    <Compile Include="Features\Blog\Authors\AuthorApiModel.cs" />
     <Compile Include="Features\Blog\TagApiModel.cs" />
-    <Compile Include="Features\Blog\AvatarApiModel.cs" />
+    <Compile Include="Features\Blog\Avatars\AvatarApiModel.cs" />
     <Compile Include="Data\Models\Tag.cs" />
     <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Features\Catalog\ProductApiModel.cs" />
@@ -259,14 +259,19 @@
     <Compile Include="Features\Polls\PollRespondentApiModel.cs" />
     <Compile Include="Data\Models\PollQuestionOption.cs" />
     <Compile Include="Features\Polls\AddOrUpdateCommand.cs" />
-    <Compile Include="Features\Blog\AddOrUpdateCommand.cs" />
+    <Compile Include="Features\Blog\Articles\AddOrUpdateCommand.cs" />
+    <Compile Include="Features\Blog\Authors\AddOrUpdateCommand.cs" />
+    <Compile Include="Features\Blog\Avatars\AddOrUpdateCommand.cs" />
+    <Compile Include="Features\Blog\Authors\AuthorController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\Blog\Tags\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

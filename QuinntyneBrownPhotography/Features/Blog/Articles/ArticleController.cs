@@ -2,7 +2,7 @@ using MediatR;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace QuinntyneBrownPhotography.Features.Blog
+namespace QuinntyneBrownPhotography.Features.Blog.Articles
 {
     [Authorize]
     [RoutePrefix("api/article")]
