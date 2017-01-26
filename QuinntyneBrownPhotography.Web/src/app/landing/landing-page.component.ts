@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
+import { ApiService } from "../shared";
 
 @Component({
     template: require("./landing-page.component.html"),
@@ -7,6 +8,10 @@ import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LandingPageComponent implements OnInit { 
+    constructor(private _apiService: ApiService) {
+
+    }
+
     ngOnInit() {
 
     }

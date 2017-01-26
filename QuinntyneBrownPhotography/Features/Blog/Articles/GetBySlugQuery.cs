@@ -4,7 +4,7 @@ using QuinntyneBrownPhotography.Utilities;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace QuinntyneBrownPhotography.Features.Blog
+namespace QuinntyneBrownPhotography.Features.Blog.Articles
 {
     public class GetBySlugQuery
     {

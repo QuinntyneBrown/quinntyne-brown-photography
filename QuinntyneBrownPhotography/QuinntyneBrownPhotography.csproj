@@ -230,13 +230,12 @@
     <Compile Include="Data\Models\Author.cs" />
     <Compile Include="Data\Models\Avatar.cs" />
     <Compile Include="Features\Blog\Authors\AuthorApiModel.cs" />
-    <Compile Include="Features\Blog\TagApiModel.cs" />
     <Compile Include="Features\Blog\Avatars\AvatarApiModel.cs" />
     <Compile Include="Data\Models\Tag.cs" />
     <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Features\Catalog\ProductApiModel.cs" />
     <Compile Include="Data\Models\ProductCategory.cs" />
-    <Compile Include="Features\Blog\GetBySlugQuery.cs" />
+    <Compile Include="Features\Blog\Articles\GetBySlugQuery.cs" />
     <Compile Include="Data\Models\Contact.cs" />
     <Compile Include="Features\Contacts\ContactController.cs" />
     <Compile Include="Features\Contacts\AddContactMessageCommand.cs" />
@@ -263,15 +262,21 @@
     <Compile Include="Features\Blog\Authors\AddOrUpdateCommand.cs" />
     <Compile Include="Features\Blog\Avatars\AddOrUpdateCommand.cs" />
     <Compile Include="Features\Blog\Authors\AuthorController.cs" />
+    <Compile Include="Features\Blog\Tags\TagController.cs" />
+    <Compile Include="Features\Blog\Tags\TagApiModel.cs" />
+    <Compile Include="Features\Blog\Avatars\AvatarController.cs" />
+    <Compile Include="Features\Contests\ContestController.cs" />
+    <Compile Include="Features\Contests\ContestEntryController.cs" />
+    <Compile Include="Features\Polls\PollController.cs" />
+    <Compile Include="Features\Polls\PollQuestionController.cs" />
+    <Compile Include="Features\Polls\PollAnswerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Blog\Tags\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

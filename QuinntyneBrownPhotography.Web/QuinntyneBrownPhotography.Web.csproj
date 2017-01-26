@@ -269,6 +269,12 @@
     <Content Include="src\app\login\login-page.component.scss">
       <DependentUpon>login-page.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\page-not-found-page.component.html">
+      <DependentUpon>page-not-found-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\page-not-found-page.component.scss">
+      <DependentUpon>page-not-found-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="tsconfig.json" />
     <Content Include="src\styles\_breakpoints.scss" />
     <Content Include="src\styles\_variables.scss" />
@@ -301,11 +307,12 @@
     <TypeScriptCompile Include="src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="src\app\shared\auth-guard.service.ts" />
     <TypeScriptCompile Include="src\app\shared\current-user.service.ts" />
+    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
@@ -345,6 +352,10 @@
     <TypeScriptCompile Include="src\app\contest\contest-entry-page.component.ts" />
     <TypeScriptCompile Include="src\app\contest\index.ts" />
     <TypeScriptCompile Include="src\app\contest\contest.module.ts" />
+    <TypeScriptCompile Include="src\app\admin\blog\tag.model.ts" />
+    <TypeScriptCompile Include="src\app\admin\blog\tag.service.ts" />
+    <TypeScriptCompile Include="src\app\admin\digital-assets\digital-asset.service.ts" />
+    <TypeScriptCompile Include="src\app\page-not-found-page.component.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
