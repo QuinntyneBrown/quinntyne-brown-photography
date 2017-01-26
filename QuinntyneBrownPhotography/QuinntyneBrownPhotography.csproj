@@ -247,15 +247,26 @@
     <Compile Include="Data\Models\ContestEntry.cs" />
     <Compile Include="Migrations\UserConfiguration.cs" />
     <Compile Include="Migrations\RoleConfiguration.cs" />
+    <Compile Include="Data\Models\Poll.cs" />
+    <Compile Include="Data\Models\PollQuestion.cs" />
+    <Compile Include="Data\Models\PollAnswer.cs" />
+    <Compile Include="Data\Models\PollRespondent.cs" />
+    <Compile Include="Features\Contests\ContestApiModel.cs" />
+    <Compile Include="Features\Contests\ContestEntryApiModel.cs" />
+    <Compile Include="Features\Polls\PollApiModel.cs" />
+    <Compile Include="Features\Polls\PollQuestionApiModel.cs" />
+    <Compile Include="Features\Polls\PollAnswerApiModel.cs" />
+    <Compile Include="Features\Polls\PollRespondentApiModel.cs" />
+    <Compile Include="Data\Models\PollQuestionOption.cs" />
+    <Compile Include="Features\Polls\AddOrUpdateCommand.cs" />
+    <Compile Include="Features\Blog\AddOrUpdateCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Contests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

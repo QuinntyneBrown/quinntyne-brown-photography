@@ -23,10 +23,24 @@ namespace QuinntyneBrownPhotography.Data
         }
 
         public DbSet<Article> Articles { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<DigitalAsset> DigitalAssets { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Avatar> Avatars { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<ContactMessage> ContactMessages { get; set; }
+        public DbSet<Contest> Contests { get; set; }
+        public DbSet<ContestEntry> ContestEntries { get; set; }        
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<DigitalAsset> DigitalAssets { get; set; }        
+        public DbSet<Poll> Polls { get; set; }
+        public DbSet<PollAnswer> PollAnswers { get; set; }
+        public DbSet<PollQuestion> PollQuestions { get; set; }
+        public DbSet<PollQuestionOption> PollQuestionOptions { get; set; }
+        public DbSet<PollRespondent> PollRespondents { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
