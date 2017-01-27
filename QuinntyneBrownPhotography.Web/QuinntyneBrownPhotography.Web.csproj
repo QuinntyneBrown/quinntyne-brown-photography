@@ -227,6 +227,12 @@
     <Content Include="src\app\admin\digital-assets\upload-page.component.scss">
       <DependentUpon>upload-page.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\app-header.component.html">
+      <DependentUpon>app-header.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\app-header.component.scss">
+      <DependentUpon>app-header.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\app.component.html">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
@@ -311,8 +317,7 @@
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="src\app\shared\auth-guard.service.ts" />
     <TypeScriptCompile Include="src\app\shared\current-user.service.ts" />
-    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
-    <TypeScriptCompile Include="src\environments\environment.ts" />
+    <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
@@ -327,7 +332,6 @@
     <TypeScriptCompile Include="src\app\login\login.module.ts" />
     <TypeScriptCompile Include="src\app\login\index.ts" />
     <TypeScriptCompile Include="src\app\blog\article-page.component.ts" />
-    <TypeScriptCompile Include="src\app\blog\article.module.ts" />
     <TypeScriptCompile Include="src\app\blog\index.ts" />
     <TypeScriptCompile Include="src\app\catalog\product-page.component.ts" />
     <TypeScriptCompile Include="src\app\catalog\index.ts" />
@@ -356,6 +360,8 @@
     <TypeScriptCompile Include="src\app\admin\blog\tag.service.ts" />
     <TypeScriptCompile Include="src\app\admin\digital-assets\digital-asset.service.ts" />
     <TypeScriptCompile Include="src\app\page-not-found-page.component.ts" />
+    <TypeScriptCompile Include="src\app\blog\blog.module.ts" />
+    <TypeScriptCompile Include="src\app\app-header.component.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

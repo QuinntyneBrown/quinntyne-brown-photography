@@ -10,6 +10,7 @@ import "./rxjs-extensions";
 import { SharedModule } from "./shared";
 
 import { AppComponent } from './app.component';
+import { AppHeaderComponent } from "./app-header.component";
 
 import {
     RoutingModule,    
@@ -18,6 +19,7 @@ import {
 
 const declarables = [
     AppComponent,
+    AppHeaderComponent,
     routedComponents
 ];
 

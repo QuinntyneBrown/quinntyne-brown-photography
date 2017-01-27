@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 
-import { ArticleComponent } from './article.component';
-
-const declarables = [ArticleComponent];
+const declarables = [];
 const providers = [];
 
 @NgModule({
@@ -12,4 +10,4 @@ const providers = [];
     declarations: [declarables],
 	providers: providers
 })
-export class ArticleModule { }
+export class BlogModule { }
