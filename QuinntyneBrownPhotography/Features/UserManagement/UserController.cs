@@ -14,6 +14,17 @@ namespace QuinntyneBrownPhotography.Features.UserManagement
             _mediator = mediator;
         }
 
+        [Route("current")]
+        [AllowAnonymous]
+        [HttpGet]
+        [ResponseType(typeof(GetCurrentUserQuery.GetCurrentUserResponse))]
+        public async Task<IHttpActionResult> Current()
+        {
+            if (!User.Identity.IsAuthenticated)
+                return Ok();
+            return Ok(await _mediator.SendAsync(new GetCurrentUserQuery.GetCurrentUserRequest(User.Identity.Name)));
+        }
+        
         protected readonly IMediator _mediator;
 
     }

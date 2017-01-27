@@ -288,6 +288,7 @@
     <Compile Include="Features\UserManagement\GetCurrentUserQueryQuery.cs" />
     <Compile Include="Features\UserManagement\RegisterCommand.cs" />
     <Compile Include="Features\DigitalAssets\GetDigitalAssetsQuery.cs" />
+    <Compile Include="Features\UserManagement\GetCurrentUserQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
