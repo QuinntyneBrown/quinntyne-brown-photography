@@ -272,13 +272,21 @@
     <Compile Include="Features\Polls\AddOrUpdatePollCommand.cs" />
     <Compile Include="Features\Polls\AddOrUpdatePollQuestionCommand.cs" />
     <Compile Include="Features\Customers\AddOrUpdateCustomerCommand.cs" />
+    <Compile Include="Data\Models\Quote.cs" />
+    <Compile Include="Data\Models\Order.cs" />
+    <Compile Include="Features\Orders\OrderApiModel.cs" />
+    <Compile Include="Features\Orders\QuoteApiModel.cs" />
+    <Compile Include="Features\Orders\QuoteController.cs" />
+    <Compile Include="Features\Orders\OrderController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\Orders\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
