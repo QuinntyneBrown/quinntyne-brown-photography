@@ -57,45 +57,20 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
             return result;
         }
 
-        //[AllowAnonymous]
-        //[Route("upload")]
-        //[HttpPost]
-        //public async Task<HttpResponseMessage> Upload(HttpRequestMessage request)
-        //{
-        //    var digitalAssets = new List<DigitalAsset>();
-        //    try
-        //    {
-        //        if (!Request.Content.IsMimeMultipartContent("form-data"))
-        //            throw new HttpResponseException(HttpStatusCode.BadRequest);
+        [AllowAnonymous]
+        [Route("upload")]
+        [HttpPost]
+        public async Task<HttpResponseMessage> Upload(HttpRequestMessage request)
+        {
+            if (!Request.Content.IsMimeMultipartContent("form-data"))
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
 
-        //        var provider = await Request.Content.ReadAsMultipartAsync(new InMemoryMultipartFormDataStreamProvider());
+            var provider = await Request.Content.ReadAsMultipartAsync(new InMemoryMultipartFormDataStreamProvider());
 
-        //        NameValueCollection formData = provider.FormData;
-        //        IList<HttpContent> files = provider.Files;
+            var response = await _mediator.SendAsync(new UploadDigitalAssetCommand.UploadDigitalAssetRequest() { Provider = provider });
 
-        //        foreach (var file in files)
-        //        {
-        //            var filename = new FileInfo(file.Headers.ContentDisposition.FileName.Trim(new char[] { '"' })
-        //                .Replace("&", "and")).Name;
-        //            Stream stream = await file.ReadAsStreamAsync();
-        //            var bytes = StreamHelper.ReadToEnd(stream);
-        //            var digitalAsset = new DigitalAsset();
-        //            digitalAsset.FileName = filename;
-        //            digitalAsset.Bytes = bytes;
-        //            digitalAsset.ContentType = System.Convert.ToString(file.Headers.ContentType);
-        //            _repository.Add(digitalAsset);
-        //            digitalAssets.Add(digitalAsset);
-        //        }
-
-        //        _uow.SaveChanges();
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        var e = exception;
-        //    }
-
-        //    return Request.CreateResponse(HttpStatusCode.OK, new DigitalAssetUploadResponseDto(digitalAssets));
-        //}
+            return Request.CreateResponse(HttpStatusCode.OK, response);            
+        }
 
         protected readonly QuinntyneBrownPhotographyDataContext _dataContext;
         protected readonly IMediator _mediator;
