@@ -14,10 +14,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Authors
             public AuthorApiModel Author { get; set; }
         }
 
-        public class AddOrUpdateResponse
-        {
-
-        }
+        public class AddOrUpdateResponse { }
 
         public class AddOrUpdateHandler : IAsyncRequestHandler<AddOrUpdateRequest, AddOrUpdateResponse>
         {
@@ -35,16 +32,11 @@ namespace QuinntyneBrownPhotography.Features.Blog.Authors
                 entity.Name = request.Author.Name;
                 await _dataContext.SaveChangesAsync();
 
-                return new AddOrUpdateResponse()
-                {
-
-                };
+                return new AddOrUpdateResponse() { };
             }
 
             private readonly QuinntyneBrownPhotographyDataContext _dataContext;
             private readonly ICache _cache;
         }
-
     }
-
 }

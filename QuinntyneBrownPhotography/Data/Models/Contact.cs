@@ -18,6 +18,7 @@ namespace QuinntyneBrownPhotography.Data.Models
         public int Id { get; set; }
         [ForeignKey("Contact")]
         public int? ContactId { get; set; }
+        public Contact Contact { get; set; }
         public string Body { get; set; }
     }
 }

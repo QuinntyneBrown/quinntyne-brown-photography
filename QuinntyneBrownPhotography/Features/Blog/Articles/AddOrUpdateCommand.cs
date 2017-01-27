@@ -49,7 +49,5 @@ namespace QuinntyneBrownPhotography.Features.Blog.Articles
             private readonly QuinntyneBrownPhotographyDataContext _dataContext;
             private readonly ICache _cache;
         }
-
     }
-
 }

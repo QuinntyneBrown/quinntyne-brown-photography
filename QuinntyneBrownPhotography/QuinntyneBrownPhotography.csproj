@@ -222,7 +222,6 @@
     <Compile Include="Features\DigitalAssets\ServeQuery.cs" />
     <Compile Include="Features\DigitalAssets\UploadCommand.cs" />
     <Compile Include="Features\DigitalAssets\UpdateCommand.cs" />
-    <Compile Include="Features\DigitalAssets\GetQuery.cs" />
     <Compile Include="Features\DigitalAssets\GetByIdQuery.cs" />
     <Compile Include="Features\DigitalAssets\GetByNameQuery.cs" />
     <Compile Include="Data\Models\Article.cs" />
@@ -288,6 +287,7 @@
     <Compile Include="Features\UserManagement\RoleApiModel.cs" />
     <Compile Include="Features\UserManagement\GetCurrentUserQueryQuery.cs" />
     <Compile Include="Features\UserManagement\RegisterCommand.cs" />
+    <Compile Include="Features\DigitalAssets\GetDigitalAssetsQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

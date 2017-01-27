@@ -8,12 +8,13 @@ namespace QuinntyneBrownPhotography.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(QuinntyneBrownPhotographyDataContext context)
         {
-            UserConfiguration.Seed(context);
             RoleConfiguration.Seed(context);
+            UserConfiguration.Seed(context);            
         }
     }
 }

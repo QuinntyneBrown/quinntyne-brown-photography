@@ -18,7 +18,7 @@ namespace QuinntyneBrownPhotography.Security
         /// </summary>
         /// <param name="password">The password.</param>
         /// <returns></returns>
-        public string TransformPassword(string password)
+        public string HashPassword(string password)
         {
             HashAlgorithm algorithm = new SHA256Managed();
             byte[] Hash = algorithm.ComputeHash(Encoding.UTF8.GetBytes(password));
