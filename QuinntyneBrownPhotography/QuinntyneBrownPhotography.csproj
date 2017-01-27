@@ -271,6 +271,7 @@
     <Compile Include="Features\Polls\PollAnswerController.cs" />
     <Compile Include="Features\Polls\AddOrUpdatePollCommand.cs" />
     <Compile Include="Features\Polls\AddOrUpdatePollQuestionCommand.cs" />
+    <Compile Include="Features\Customers\AddOrUpdateCustomerCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
