@@ -15,6 +15,15 @@ export class ApiService {
                 return Observable.of(false);
             });        
     }
+
+    public login(options: { username: string, password: string }) {
+        return this._http
+            .post(`${this._baseUrl}/api/token`, options)
+            .map(data => data.json())
+            .catch(err => {
+                return Observable.of(false);
+            });
+    }
     
     public get _baseUrl() { return environment.baseUrl; }
 

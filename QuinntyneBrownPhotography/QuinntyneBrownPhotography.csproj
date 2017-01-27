@@ -179,6 +179,8 @@
     <Compile Include="ApiConfiguration.cs" />
     <Compile Include="Features\Catalog\ProductController.cs" />
     <Compile Include="Features\Customers\CustomerController.cs" />
+    <Compile Include="Features\UserManagement\AuthenticateCommand.cs" />
+    <Compile Include="Features\UserManagement\GetClaimsForUserQuery.cs" />
     <Compile Include="Filters\WebApiUnityActionFilterProvider.cs" />
     <Compile Include="Data\QuinntyneBrownPhotographyDataContext.cs" />
     <Compile Include="Filters\HandleError.cs" />
@@ -280,15 +282,19 @@
     <Compile Include="Features\Orders\OrderController.cs" />
     <Compile Include="Features\RSS\RSSFeedController.cs" />
     <Compile Include="Features\RSS\GetFeedQuery.cs" />
+    <Compile Include="Features\UserManagement\UserController.cs" />
+    <Compile Include="Features\UserManagement\RoleController.cs" />
+    <Compile Include="Features\UserManagement\UserApiModel.cs" />
+    <Compile Include="Features\UserManagement\RoleApiModel.cs" />
+    <Compile Include="Features\UserManagement\GetCurrentUserQueryQuery.cs" />
+    <Compile Include="Features\UserManagement\RegisterCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\RSS\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
