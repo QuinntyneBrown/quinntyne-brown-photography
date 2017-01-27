@@ -13,7 +13,7 @@ export class ApiService {
             .map(data => data.json())
             .catch(err => {
                 return Observable.of(false);
-            });
+            });        
     }
     
     public get _baseUrl() { return environment.baseUrl; }

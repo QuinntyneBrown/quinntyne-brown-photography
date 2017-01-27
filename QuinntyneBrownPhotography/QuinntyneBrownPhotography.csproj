@@ -278,6 +278,8 @@
     <Compile Include="Features\Orders\QuoteApiModel.cs" />
     <Compile Include="Features\Orders\QuoteController.cs" />
     <Compile Include="Features\Orders\OrderController.cs" />
+    <Compile Include="Features\RSS\RSSFeedController.cs" />
+    <Compile Include="Features\RSS\GetFeedQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -285,7 +287,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\Orders\" />
+    <Folder Include="Features\RSS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
