@@ -9,30 +9,27 @@ using System.Data.Entity;
 
 namespace QuinntyneBrownPhotography.Features.Blog.Avatars
 {
-    public class AddOrUpdateCommand
+    public class AddOrUpdateAvatarCommand
     {
-        public class AddOrUpdateRequest : IAsyncRequest<AddOrUpdateResponse>
+        public class AddOrUpdateAvatarRequest : IAsyncRequest<AddOrUpdateAvatarResponse>
         {
             public AvatarApiModel Avatar { get; set; }
         }
 
-        public class AddOrUpdateResponse
+        public class AddOrUpdateAvatarResponse
         {
-            public AddOrUpdateResponse()
-            {
 
-            }
         }
 
-        public class AddOrUpdateHandler : IAsyncRequestHandler<AddOrUpdateRequest, AddOrUpdateResponse>
+        public class AddOrUpdateAvatarHandler : IAsyncRequestHandler<AddOrUpdateAvatarRequest, AddOrUpdateAvatarResponse>
         {
-            public AddOrUpdateHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
+            public AddOrUpdateAvatarHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
             {
                 _dataContext = dataContext;
                 _cache = cache;
             }
 
-            public async Task<AddOrUpdateResponse> Handle(AddOrUpdateRequest request)
+            public async Task<AddOrUpdateAvatarResponse> Handle(AddOrUpdateAvatarRequest request)
             {
                 var entity = await _dataContext.Avatars
                     .SingleOrDefaultAsync(x => x.Id == request.Avatar.Id && x.IsDeleted == false);
@@ -40,7 +37,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Avatars
                 entity.Name = request.Avatar.Name;
                 await _dataContext.SaveChangesAsync();
 
-                return new AddOrUpdateResponse()
+                return new AddOrUpdateAvatarResponse()
                 {
 
                 };

@@ -1,25 +1,51 @@
-﻿using MediatR;
+using MediatR;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace QuinntyneBrownPhotography.Features.Catalog
 {
     [Authorize]
     [RoutePrefix("api/product")]
-    public class ProductController: ApiController
+    public class ProductController : ApiController
     {
         public ProductController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
+        [Route("add")]
+        [HttpPost]
+        [ResponseType(typeof(AddOrUpdateProductCommand.AddOrUpdateProductResponse))]
+        public async Task<IHttpActionResult> Add(AddOrUpdateProductCommand.AddOrUpdateProductRequest request)
+            => Ok(await _mediator.SendAsync(request));
+
+        [Route("update")]
+        [HttpPut]
+        [ResponseType(typeof(AddOrUpdateProductCommand.AddOrUpdateProductResponse))]
+        public async Task<IHttpActionResult> Update(AddOrUpdateProductCommand.AddOrUpdateProductRequest request)
+            => Ok(await _mediator.SendAsync(request));
+        
+        [Route("get")]
+        [AllowAnonymous]
         [HttpGet]
-        [Route("getbyslug")]
-        public async Task<IHttpActionResult> GetBySlug(GetBySlugQuery.GetBySlugRequest request)
-        {
-            return Ok(await _mediator.SendAsync(request));
-        }
+        [ResponseType(typeof(GetProductsQuery.GetProductsResponse))]
+        public async Task<IHttpActionResult> Get()
+            => Ok(await _mediator.SendAsync(new GetProductsQuery.GetProductsRequest()));
+
+        [Route("getById")]
+        [HttpGet]
+        [ResponseType(typeof(GetProductByIdQuery.GetProductByIdResponse))]
+        public async Task<IHttpActionResult> GetById(GetProductByIdQuery.GetProductByIdRequest request)
+            => Ok(await _mediator.SendAsync(request));
+
+        [Route("remove")]
+        [HttpDelete]
+        [ResponseType(typeof(RemoveProductCommand.RemoveProductResponse))]
+        public async Task<IHttpActionResult> Remove(RemoveProductCommand.RemoveProductRequest request)
+            => Ok(await _mediator.SendAsync(request));
 
         protected readonly IMediator _mediator;
+
     }
 }

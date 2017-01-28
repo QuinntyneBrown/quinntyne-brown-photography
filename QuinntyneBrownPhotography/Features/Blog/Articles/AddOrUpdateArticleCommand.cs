@@ -9,38 +9,36 @@ using System.Data.Entity;
 
 namespace QuinntyneBrownPhotography.Features.Blog.Articles
 {
-    public class AddOrUpdateCommand
+    public class AddOrUpdateArticleCommand
     {
-        public class AddOrUpdateRequest : IAsyncRequest<AddOrUpdateResponse>
+        public class AddOrUpdateArticleRequest : IAsyncRequest<AddOrUpdateArticleResponse>
         {
             public ArticleApiModel Article { get; set; }
         }
 
-        public class AddOrUpdateResponse
+        public class AddOrUpdateArticleResponse
         {
-            public AddOrUpdateResponse()
-            {
 
-            }
         }
 
-        public class AddOrUpdateHandler : IAsyncRequestHandler<AddOrUpdateRequest, AddOrUpdateResponse>
+        public class AddOrUpdateArticleHandler : IAsyncRequestHandler<AddOrUpdateArticleRequest, AddOrUpdateArticleResponse>
         {
-            public AddOrUpdateHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
+            public AddOrUpdateArticleHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
             {
                 _dataContext = dataContext;
                 _cache = cache;
             }
 
-            public async Task<AddOrUpdateResponse> Handle(AddOrUpdateRequest request)
+            public async Task<AddOrUpdateArticleResponse> Handle(AddOrUpdateArticleRequest request)
             {
                 var entity = await _dataContext.Articles
                     .SingleOrDefaultAsync(x => x.Id == request.Article.Id && x.IsDeleted == false);
                 if (entity == null) _dataContext.Articles.Add(entity = new Article());
                 
+
                 await _dataContext.SaveChangesAsync();
 
-                return new AddOrUpdateResponse()
+                return new AddOrUpdateArticleResponse()
                 {
 
                 };
@@ -49,5 +47,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Articles
             private readonly QuinntyneBrownPhotographyDataContext _dataContext;
             private readonly ICache _cache;
         }
+
     }
+
 }

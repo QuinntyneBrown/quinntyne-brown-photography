@@ -1,7 +1,11 @@
 using MediatR;
 using QuinntyneBrownPhotography.Data;
+using QuinntyneBrownPhotography.Data.Models;
 using QuinntyneBrownPhotography.Utilities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Data.Entity;
 
 namespace QuinntyneBrownPhotography.Features.Blog.Authors
 {

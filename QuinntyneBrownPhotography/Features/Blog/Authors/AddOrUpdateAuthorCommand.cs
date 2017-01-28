@@ -2,29 +2,34 @@ using MediatR;
 using QuinntyneBrownPhotography.Data;
 using QuinntyneBrownPhotography.Data.Models;
 using QuinntyneBrownPhotography.Utilities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 using System.Data.Entity;
 
 namespace QuinntyneBrownPhotography.Features.Blog.Authors
 {
-    public class AddOrUpdateCommand
+    public class AddOrUpdateAuthorCommand
     {
-        public class AddOrUpdateRequest : IAsyncRequest<AddOrUpdateResponse>
+        public class AddOrUpdateAuthorRequest : IAsyncRequest<AddOrUpdateAuthorResponse>
         {
             public AuthorApiModel Author { get; set; }
         }
 
-        public class AddOrUpdateResponse { }
-
-        public class AddOrUpdateHandler : IAsyncRequestHandler<AddOrUpdateRequest, AddOrUpdateResponse>
+        public class AddOrUpdateAuthorResponse
         {
-            public AddOrUpdateHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
+
+        }
+
+        public class AddOrUpdateAuthorHandler : IAsyncRequestHandler<AddOrUpdateAuthorRequest, AddOrUpdateAuthorResponse>
+        {
+            public AddOrUpdateAuthorHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
             {
                 _dataContext = dataContext;
                 _cache = cache;
             }
 
-            public async Task<AddOrUpdateResponse> Handle(AddOrUpdateRequest request)
+            public async Task<AddOrUpdateAuthorResponse> Handle(AddOrUpdateAuthorRequest request)
             {
                 var entity = await _dataContext.Authors
                     .SingleOrDefaultAsync(x => x.Id == request.Author.Id && x.IsDeleted == false);
@@ -32,11 +37,16 @@ namespace QuinntyneBrownPhotography.Features.Blog.Authors
                 entity.Name = request.Author.Name;
                 await _dataContext.SaveChangesAsync();
 
-                return new AddOrUpdateResponse() { };
+                return new AddOrUpdateAuthorResponse()
+                {
+
+                };
             }
 
             private readonly QuinntyneBrownPhotographyDataContext _dataContext;
             private readonly ICache _cache;
         }
+
     }
+
 }

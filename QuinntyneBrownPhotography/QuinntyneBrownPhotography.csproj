@@ -177,7 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiConfiguration.cs" />
-    <Compile Include="Features\Catalog\ProductController.cs" />
     <Compile Include="Features\Customers\CustomerController.cs" />
     <Compile Include="Features\UserManagement\AuthenticateCommand.cs" />
     <Compile Include="Features\UserManagement\GetClaimsForUserQuery.cs" />
@@ -224,23 +223,16 @@
     <Compile Include="Features\DigitalAssets\GetByIdQuery.cs" />
     <Compile Include="Features\DigitalAssets\GetByNameQuery.cs" />
     <Compile Include="Data\Models\Article.cs" />
-    <Compile Include="Features\Blog\Articles\ArticleApiModel.cs" />
-    <Compile Include="Features\Blog\Articles\ArticleController.cs" />
     <Compile Include="Data\Models\Author.cs" />
     <Compile Include="Data\Models\Avatar.cs" />
-    <Compile Include="Features\Blog\Authors\AuthorApiModel.cs" />
-    <Compile Include="Features\Blog\Avatars\AvatarApiModel.cs" />
     <Compile Include="Data\Models\Tag.cs" />
     <Compile Include="Data\Models\Product.cs" />
-    <Compile Include="Features\Catalog\ProductApiModel.cs" />
     <Compile Include="Data\Models\ProductCategory.cs" />
-    <Compile Include="Features\Blog\Articles\GetBySlugQuery.cs" />
     <Compile Include="Data\Models\Contact.cs" />
     <Compile Include="Features\Contacts\ContactController.cs" />
     <Compile Include="Features\Contacts\AddContactMessageCommand.cs" />
     <Compile Include="Features\Contacts\ContactApiModel.cs" />
     <Compile Include="Features\Contacts\ContactMessageApiModel.cs" />
-    <Compile Include="Features\Catalog\GetBySlugQuery.cs" />
     <Compile Include="Data\Models\Contest.cs" />
     <Compile Include="Data\Models\ContestEntry.cs" />
     <Compile Include="Migrations\UserConfiguration.cs" />
@@ -256,13 +248,6 @@
     <Compile Include="Features\Polls\PollAnswerApiModel.cs" />
     <Compile Include="Features\Polls\PollRespondentApiModel.cs" />
     <Compile Include="Data\Models\PollQuestionOption.cs" />
-    <Compile Include="Features\Blog\Articles\AddOrUpdateCommand.cs" />
-    <Compile Include="Features\Blog\Authors\AddOrUpdateCommand.cs" />
-    <Compile Include="Features\Blog\Avatars\AddOrUpdateCommand.cs" />
-    <Compile Include="Features\Blog\Authors\AuthorController.cs" />
-    <Compile Include="Features\Blog\Tags\TagController.cs" />
-    <Compile Include="Features\Blog\Tags\TagApiModel.cs" />
-    <Compile Include="Features\Blog\Avatars\AvatarController.cs" />
     <Compile Include="Features\Contests\ContestController.cs" />
     <Compile Include="Features\Contests\ContestEntryController.cs" />
     <Compile Include="Features\Polls\PollController.cs" />
@@ -288,9 +273,6 @@
     <Compile Include="Features\Customers\GetCustomersQuery.cs" />
     <Compile Include="Features\Customers\RemoveCustomerCommand.cs" />
     <Compile Include="Features\Contacts\RemoveContactCommand.cs" />
-    <Compile Include="Features\Blog\Articles\RemoveArticleCommand.cs" />
-    <Compile Include="Features\Blog\Authors\RemoveAuthorCommand.cs" />
-    <Compile Include="Features\Catalog\GetProductsQuery.cs" />
     <Compile Include="Features\Orders\AddOrUpdateOrderCommand.cs" />
     <Compile Include="Features\Orders\GetOrdersQuery.cs" />
     <Compile Include="Features\Orders\GetOrderByIdQuery.cs" />
@@ -311,13 +293,45 @@
     <Compile Include="Features\Contests\GetContestEntriesQuery.cs" />
     <Compile Include="Features\Contests\GetContestEntryByIdQuery.cs" />
     <Compile Include="Features\Contests\RemoveContestEntryCommand.cs" />
+    <Compile Include="Features\Blog\Articles\AddOrUpdateArticleCommand.cs" />
+    <Compile Include="Features\Blog\Articles\GetArticlesQuery.cs" />
+    <Compile Include="Features\Blog\Articles\GetArticleByIdQuery.cs" />
+    <Compile Include="Features\Blog\Articles\RemoveArticleCommand.cs" />
+    <Compile Include="Features\Blog\Articles\ArticleApiModel.cs" />
+    <Compile Include="Features\Blog\Articles\ArticleController.cs" />
+    <Compile Include="Features\Blog\Authors\AddOrUpdateAuthorCommand.cs" />
+    <Compile Include="Features\Blog\Authors\GetAuthorsQuery.cs" />
+    <Compile Include="Features\Blog\Authors\GetAuthorByIdQuery.cs" />
+    <Compile Include="Features\Blog\Authors\RemoveAuthorCommand.cs" />
+    <Compile Include="Features\Blog\Authors\AuthorApiModel.cs" />
+    <Compile Include="Features\Blog\Authors\AuthorController.cs" />
+    <Compile Include="Features\Blog\Avatars\AddOrUpdateAvatarCommand.cs" />
+    <Compile Include="Features\Blog\Avatars\GetAvatarsQuery.cs" />
+    <Compile Include="Features\Blog\Avatars\GetAvatarByIdQuery.cs" />
+    <Compile Include="Features\Blog\Avatars\RemoveAvatarCommand.cs" />
+    <Compile Include="Features\Blog\Avatars\AvatarApiModel.cs" />
+    <Compile Include="Features\Blog\Avatars\AvatarController.cs" />
+    <Compile Include="Features\Blog\Tags\AddOrUpdateTagCommand.cs" />
+    <Compile Include="Features\Blog\Tags\GetTagsQuery.cs" />
+    <Compile Include="Features\Blog\Tags\GetTagByIdQuery.cs" />
+    <Compile Include="Features\Blog\Tags\RemoveTagCommand.cs" />
+    <Compile Include="Features\Blog\Tags\TagApiModel.cs" />
+    <Compile Include="Features\Blog\Tags\TagController.cs" />
+    <Compile Include="Features\Catalog\AddOrUpdateProductCommand.cs" />
+    <Compile Include="Features\Catalog\GetProductsQuery.cs" />
+    <Compile Include="Features\Catalog\GetProductByIdQuery.cs" />
+    <Compile Include="Features\Catalog\RemoveProductCommand.cs" />
+    <Compile Include="Features\Catalog\ProductApiModel.cs" />
+    <Compile Include="Features\Catalog\ProductController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\Catalog\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
