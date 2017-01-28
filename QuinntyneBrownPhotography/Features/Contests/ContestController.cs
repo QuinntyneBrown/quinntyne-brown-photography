@@ -14,6 +14,37 @@ namespace QuinntyneBrownPhotography.Features.Contests
             _mediator = mediator;
         }
 
+        [Route("add")]
+        [HttpPost]
+        [ResponseType(typeof(AddOrUpdateContestCommand.AddOrUpdateContestResponse))]
+        public async Task<IHttpActionResult> Add(AddOrUpdateContestCommand.AddOrUpdateContestRequest request)
+            => Ok(await _mediator.SendAsync(request));
+
+        [Route("update")]
+        [HttpPut]
+        [ResponseType(typeof(AddOrUpdateContestCommand.AddOrUpdateContestResponse))]
+        public async Task<IHttpActionResult> Update(AddOrUpdateContestCommand.AddOrUpdateContestRequest request)
+            => Ok(await _mediator.SendAsync(request));
+        
+        [Route("get")]
+        [AllowAnonymous]
+        [HttpGet]
+        [ResponseType(typeof(GetContestsQuery.GetContestsResponse))]
+        public async Task<IHttpActionResult> Get()
+            => Ok(await _mediator.SendAsync(new GetContestsQuery.GetContestsRequest()));
+
+        [Route("getById")]
+        [HttpGet]
+        [ResponseType(typeof(GetContestByIdQuery.GetContestByIdResponse))]
+        public async Task<IHttpActionResult> GetById(GetContestByIdQuery.GetContestByIdRequest request)
+            => Ok(await _mediator.SendAsync(request));
+
+        [Route("remove")]
+        [HttpDelete]
+        [ResponseType(typeof(RemoveContestCommand.RemoveContestResponse))]
+        public async Task<IHttpActionResult> Remove(RemoveContestCommand.RemoveContestRequest request)
+            => Ok(await _mediator.SendAsync(request));
+
         protected readonly IMediator _mediator;
 
     }

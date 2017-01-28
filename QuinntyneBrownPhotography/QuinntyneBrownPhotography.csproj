@@ -303,15 +303,21 @@
     <Compile Include="Features\Orders\RemoveQuoteCommand.cs" />
     <Compile Include="Features\Orders\QuoteApiModel.cs" />
     <Compile Include="Features\Orders\QuoteController.cs" />
+    <Compile Include="Features\Contests\AddOrUpdateContestCommand.cs" />
+    <Compile Include="Features\Contests\GetContestsQuery.cs" />
+    <Compile Include="Features\Contests\GetContestByIdQuery.cs" />
+    <Compile Include="Features\Contests\RemoveContestCommand.cs" />
+    <Compile Include="Features\Contests\AddOrUpdateContestEntryCommand.cs" />
+    <Compile Include="Features\Contests\GetContestEntriesQuery.cs" />
+    <Compile Include="Features\Contests\GetContestEntryByIdQuery.cs" />
+    <Compile Include="Features\Contests\RemoveContestEntryCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Orders\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
