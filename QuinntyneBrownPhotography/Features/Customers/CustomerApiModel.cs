@@ -20,5 +20,8 @@ namespace QuinntyneBrownPhotography.Features.Customers
             model.PhoneNumber = customer.Firstname;
             return model;
         }
+
+        public static CustomerApiModel FromCustomer(Customer customer)
+        => FromCustomer<CustomerApiModel>(customer);
     }
 }

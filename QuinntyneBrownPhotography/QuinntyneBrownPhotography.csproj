@@ -224,7 +224,6 @@
     <Compile Include="Features\DigitalAssets\GetByIdQuery.cs" />
     <Compile Include="Features\DigitalAssets\GetByNameQuery.cs" />
     <Compile Include="Data\Models\Article.cs" />
-    <Compile Include="Features\Customers\GetByIdQuery.cs" />
     <Compile Include="Features\Blog\Articles\ArticleApiModel.cs" />
     <Compile Include="Features\Blog\Articles\ArticleController.cs" />
     <Compile Include="Data\Models\Author.cs" />
@@ -274,10 +273,6 @@
     <Compile Include="Features\Customers\AddOrUpdateCustomerCommand.cs" />
     <Compile Include="Data\Models\Quote.cs" />
     <Compile Include="Data\Models\Order.cs" />
-    <Compile Include="Features\Orders\OrderApiModel.cs" />
-    <Compile Include="Features\Orders\QuoteApiModel.cs" />
-    <Compile Include="Features\Orders\QuoteController.cs" />
-    <Compile Include="Features\Orders\OrderController.cs" />
     <Compile Include="Features\RSS\RSSFeedController.cs" />
     <Compile Include="Features\RSS\GetFeedQuery.cs" />
     <Compile Include="Features\UserManagement\UserController.cs" />
@@ -289,13 +284,34 @@
     <Compile Include="Features\DigitalAssets\GetDigitalAssetsQuery.cs" />
     <Compile Include="Features\UserManagement\GetCurrentUserQuery.cs" />
     <Compile Include="Features\DigitalAssets\UploadDigitalAssetCommand.cs" />
+    <Compile Include="Features\Customers\GetCustomerByIdQuery.cs" />
+    <Compile Include="Features\Customers\GetCustomersQuery.cs" />
+    <Compile Include="Features\Customers\RemoveCustomerCommand.cs" />
+    <Compile Include="Features\Contacts\RemoveContactCommand.cs" />
+    <Compile Include="Features\Blog\Articles\RemoveArticleCommand.cs" />
+    <Compile Include="Features\Blog\Authors\RemoveAuthorCommand.cs" />
+    <Compile Include="Features\Catalog\GetProductsQuery.cs" />
+    <Compile Include="Features\Orders\AddOrUpdateOrderCommand.cs" />
+    <Compile Include="Features\Orders\GetOrdersQuery.cs" />
+    <Compile Include="Features\Orders\GetOrderByIdQuery.cs" />
+    <Compile Include="Features\Orders\RemoveOrderCommand.cs" />
+    <Compile Include="Features\Orders\OrderApiModel.cs" />
+    <Compile Include="Features\Orders\OrderController.cs" />
+    <Compile Include="Features\Orders\AddOrUpdateQuoteCommand.cs" />
+    <Compile Include="Features\Orders\GetQuotesQuery.cs" />
+    <Compile Include="Features\Orders\GetQuoteByIdQuery.cs" />
+    <Compile Include="Features\Orders\RemoveQuoteCommand.cs" />
+    <Compile Include="Features\Orders\QuoteApiModel.cs" />
+    <Compile Include="Features\Orders\QuoteController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\Orders\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

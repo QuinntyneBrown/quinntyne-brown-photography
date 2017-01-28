@@ -6,7 +6,7 @@ using System.Web.Http.Description;
 namespace QuinntyneBrownPhotography.Features.Contests
 {
     [Authorize]
-    [RoutePrefix("api/contestEntry")]
+    [RoutePrefix("api/contestentry")]
     public class ContestEntryController : ApiController
     {
         public ContestEntryController(IMediator mediator)
