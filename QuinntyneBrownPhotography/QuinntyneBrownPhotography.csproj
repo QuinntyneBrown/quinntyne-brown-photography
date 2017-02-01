@@ -358,13 +358,36 @@
     <Compile Include="Features\Tenants\TenantApiModel.cs" />
     <Compile Include="Features\Tenants\TenantController.cs" />
     <Compile Include="Utilities\RedisCache.cs" />
+    <Compile Include="Features\PhotoGalleries\AddOrUpdatePhotoGalleryCommand.cs" />
+    <Compile Include="Features\PhotoGalleries\GetPhotoGallerysQuery.cs" />
+    <Compile Include="Features\PhotoGalleries\GetPhotoGalleryByIdQuery.cs" />
+    <Compile Include="Features\PhotoGalleries\RemovePhotoGalleryCommand.cs" />
+    <Compile Include="Features\PhotoGalleries\PhotoGalleryApiModel.cs" />
+    <Compile Include="Features\PhotoGalleries\PhotoGalleryController.cs" />
+    <Compile Include="Features\PhotoGalleries\AddOrUpdatePhotoCommand.cs" />
+    <Compile Include="Features\PhotoGalleries\GetPhotosQuery.cs" />
+    <Compile Include="Features\PhotoGalleries\GetPhotoByIdQuery.cs" />
+    <Compile Include="Features\PhotoGalleries\RemovePhotoCommand.cs" />
+    <Compile Include="Features\PhotoGalleries\PhotoApiModel.cs" />
+    <Compile Include="Features\PhotoGalleries\PhotoController.cs" />
+    <Compile Include="Features\PhotoGalleries\AddOrUpdatePhotographerCommand.cs" />
+    <Compile Include="Features\PhotoGalleries\GetPhotographersQuery.cs" />
+    <Compile Include="Features\PhotoGalleries\GetPhotographerByIdQuery.cs" />
+    <Compile Include="Features\PhotoGalleries\RemovePhotographerCommand.cs" />
+    <Compile Include="Features\PhotoGalleries\PhotographerApiModel.cs" />
+    <Compile Include="Features\PhotoGalleries\PhotographerController.cs" />
+    <Compile Include="Data\Models\Photographer.cs" />
+    <Compile Include="Data\Models\Photo.cs" />
+    <Compile Include="Data\Models\PhotoGallery.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="leora.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\PhotoGalleries\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

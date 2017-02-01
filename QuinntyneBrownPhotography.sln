@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuinntyneBrownPhotography.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuinntyneBrownPhotography.Admin", "QuinntyneBrownPhotography.Admin\QuinntyneBrownPhotography.Admin.csproj", "{FB687DE3-B0E0-4E55-BFD1-BEEE5D480E2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuinntyneBrownPhotography.SelfHost", "QuinntyneBrownPhotography.SelfHost\QuinntyneBrownPhotography.SelfHost.csproj", "{6B245D9A-D497-41D5-AC8B-710190F62C31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{FB687DE3-B0E0-4E55-BFD1-BEEE5D480E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB687DE3-B0E0-4E55-BFD1-BEEE5D480E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB687DE3-B0E0-4E55-BFD1-BEEE5D480E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B245D9A-D497-41D5-AC8B-710190F62C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B245D9A-D497-41D5-AC8B-710190F62C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B245D9A-D497-41D5-AC8B-710190F62C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B245D9A-D497-41D5-AC8B-710190F62C31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
