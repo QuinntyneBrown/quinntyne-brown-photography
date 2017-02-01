@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Contests
 {
     public class RemoveContestEntryCommand
     {
-        public class RemoveContestEntryRequest : IAsyncRequest<RemoveContestEntryResponse>
+        public class RemoveContestEntryRequest : IRequest<RemoveContestEntryResponse>
         {
             public int Id { get; set; }
         }

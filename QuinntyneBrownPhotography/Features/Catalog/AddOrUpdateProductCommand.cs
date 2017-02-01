@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Catalog
 {
     public class AddOrUpdateProductCommand
     {
-        public class AddOrUpdateProductRequest : IAsyncRequest<AddOrUpdateProductResponse>
+        public class AddOrUpdateProductRequest : IRequest<AddOrUpdateProductResponse>
         {
             public ProductApiModel Product { get; set; }
         }

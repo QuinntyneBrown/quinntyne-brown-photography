@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Avatars
 {
     public class GetAvatarsQuery
     {
-        public class GetAvatarsRequest : IAsyncRequest<GetAvatarsResponse> { }
+        public class GetAvatarsRequest : IRequest<GetAvatarsResponse> { }
 
         public class GetAvatarsResponse
         {

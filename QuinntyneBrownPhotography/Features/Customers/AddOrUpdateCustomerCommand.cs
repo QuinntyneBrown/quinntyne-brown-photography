@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Customers
 {
     public class AddOrUpdateCustomerCommand
     {
-        public class AddOrUpdateCustomerRequest : IAsyncRequest<AddOrUpdateCustomerResponse>
+        public class AddOrUpdateCustomerRequest : IRequest<AddOrUpdateCustomerResponse>
         {
             public CustomerApiModel Customer { get; set; }
         }

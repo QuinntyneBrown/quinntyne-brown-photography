@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Articles
 {
     public class AddOrUpdateArticleCommand
     {
-        public class AddOrUpdateArticleRequest : IAsyncRequest<AddOrUpdateArticleResponse>
+        public class AddOrUpdateArticleRequest : IRequest<AddOrUpdateArticleResponse>
         {
             public ArticleApiModel Article { get; set; }
         }

@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Tags
 {
     public class RemoveTagCommand
     {
-        public class RemoveTagRequest : IAsyncRequest<RemoveTagResponse>
+        public class RemoveTagRequest : IRequest<RemoveTagResponse>
         {
             public int Id { get; set; }
         }

@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
 {
     public class UpdateCommand
     {
-        public class UpdateRequest : IAsyncRequest<UpdateResponse>
+        public class UpdateRequest : IRequest<UpdateResponse>
         {
             public UpdateRequest()
             {

@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.UserManagement
 {
     public class GetCurrentUserQuery
     {
-        public class GetCurrentUserRequest : IAsyncRequest<GetCurrentUserResponse>
+        public class GetCurrentUserRequest : IRequest<GetCurrentUserResponse>
         {
             public GetCurrentUserRequest(string username)
             {

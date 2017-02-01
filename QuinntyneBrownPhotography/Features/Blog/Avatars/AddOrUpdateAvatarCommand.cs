@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Avatars
 {
     public class AddOrUpdateAvatarCommand
     {
-        public class AddOrUpdateAvatarRequest : IAsyncRequest<AddOrUpdateAvatarResponse>
+        public class AddOrUpdateAvatarRequest : IRequest<AddOrUpdateAvatarResponse>
         {
             public AvatarApiModel Avatar { get; set; }
         }

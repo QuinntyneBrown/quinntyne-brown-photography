@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.RSS
 {
     public class GetFeedQuery
     {
-        public class GetFeedRequest : IAsyncRequest<GetFeedResponse>
+        public class GetFeedRequest : IRequest<GetFeedResponse>
         {
             public GetFeedRequest()
             {

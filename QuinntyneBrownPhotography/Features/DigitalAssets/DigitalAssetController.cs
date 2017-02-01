@@ -1,19 +1,10 @@
 using MediatR;
-using QuinntyneBrownPhotography.Data;
-using QuinntyneBrownPhotography.Data.Models;
 using QuinntyneBrownPhotography.Features.DigitalAssets.UploadHandlers;
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Http;
-using System.Web.Http.Description;
-using WebApi.OutputCache.V2;
 
 namespace QuinntyneBrownPhotography.Features.DigitalAssets
 {
@@ -48,7 +39,7 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
         [AllowAnonymous]
         public async Task<HttpResponseMessage> Serve([FromUri]ServeQuery.ServeRequest request)
         {
-            var response = await _mediator.SendAsync(request);            
+            var response = await _mediator.Send(request);            
             HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);
             if (response == null)
                 return result;
@@ -67,12 +58,11 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
 
             var provider = await Request.Content.ReadAsMultipartAsync(new InMemoryMultipartFormDataStreamProvider());
 
-            var response = await _mediator.SendAsync(new UploadDigitalAssetCommand.UploadDigitalAssetRequest() { Provider = provider });
+            var response = await _mediator.Send(new UploadDigitalAssetCommand.UploadDigitalAssetRequest() { Provider = provider });
 
             return Request.CreateResponse(HttpStatusCode.OK, response);            
         }
 
-        protected readonly QuinntyneBrownPhotographyDataContext _dataContext;
         protected readonly IMediator _mediator;
     }
 }

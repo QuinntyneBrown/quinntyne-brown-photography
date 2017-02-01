@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Tags
 {
     public class GetTagByIdQuery
     {
-        public class GetTagByIdRequest : IAsyncRequest<GetTagByIdResponse> { 
+        public class GetTagByIdRequest : IRequest<GetTagByIdResponse> { 
 			public int Id { get; set; }
 		}
 

@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Orders
 {
     public class GetQuotesQuery
     {
-        public class GetQuotesRequest : IAsyncRequest<GetQuotesResponse> { }
+        public class GetQuotesRequest : IRequest<GetQuotesResponse> { }
 
         public class GetQuotesResponse
         {

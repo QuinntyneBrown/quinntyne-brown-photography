@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Customers
 {
     public class RemoveCustomerCommand
     {
-        public class RemoveCustomerRequest : IAsyncRequest<RemoveCustomerResponse>
+        public class RemoveCustomerRequest : IRequest<RemoveCustomerResponse>
         {
             public int Id { get; set; }
         }

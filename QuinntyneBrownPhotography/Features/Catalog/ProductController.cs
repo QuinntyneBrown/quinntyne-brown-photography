@@ -18,32 +18,32 @@ namespace QuinntyneBrownPhotography.Features.Catalog
         [HttpPost]
         [ResponseType(typeof(AddOrUpdateProductCommand.AddOrUpdateProductResponse))]
         public async Task<IHttpActionResult> Add(AddOrUpdateProductCommand.AddOrUpdateProductRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         [Route("update")]
         [HttpPut]
         [ResponseType(typeof(AddOrUpdateProductCommand.AddOrUpdateProductResponse))]
         public async Task<IHttpActionResult> Update(AddOrUpdateProductCommand.AddOrUpdateProductRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
         
         [Route("get")]
         [AllowAnonymous]
         [HttpGet]
         [ResponseType(typeof(GetProductsQuery.GetProductsResponse))]
         public async Task<IHttpActionResult> Get()
-            => Ok(await _mediator.SendAsync(new GetProductsQuery.GetProductsRequest()));
+            => Ok(await _mediator.Send(new GetProductsQuery.GetProductsRequest()));
 
         [Route("getById")]
         [HttpGet]
         [ResponseType(typeof(GetProductByIdQuery.GetProductByIdResponse))]
         public async Task<IHttpActionResult> GetById(GetProductByIdQuery.GetProductByIdRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         [Route("remove")]
         [HttpDelete]
         [ResponseType(typeof(RemoveProductCommand.RemoveProductResponse))]
         public async Task<IHttpActionResult> Remove(RemoveProductCommand.RemoveProductRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         protected readonly IMediator _mediator;
 

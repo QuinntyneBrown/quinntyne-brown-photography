@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Orders
 {
     public class AddOrUpdateOrderCommand
     {
-        public class AddOrUpdateOrderRequest : IAsyncRequest<AddOrUpdateOrderResponse>
+        public class AddOrUpdateOrderRequest : IRequest<AddOrUpdateOrderResponse>
         {
             public OrderApiModel Order { get; set; }
         }

@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Contacts
 {
     public class AddContactMessageCommand
     {
-        public class AddContactMessageRequest : IAsyncRequest<AddContactMessageResponse>
+        public class AddContactMessageRequest : IRequest<AddContactMessageResponse>
         {
             public AddContactMessageRequest()
             {

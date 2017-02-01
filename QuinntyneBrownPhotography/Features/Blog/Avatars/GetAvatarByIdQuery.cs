@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Avatars
 {
     public class GetAvatarByIdQuery
     {
-        public class GetAvatarByIdRequest : IAsyncRequest<GetAvatarByIdResponse> { 
+        public class GetAvatarByIdRequest : IRequest<GetAvatarByIdResponse> { 
 			public int Id { get; set; }
 		}
 

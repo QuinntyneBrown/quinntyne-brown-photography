@@ -9,7 +9,7 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
 {
     public class GetByIdQuery
     {
-        public class GetByIdRequest : IAsyncRequest<GetByIdResponse>
+        public class GetByIdRequest : IRequest<GetByIdResponse>
         {
             public int Id { get; set; }
         }

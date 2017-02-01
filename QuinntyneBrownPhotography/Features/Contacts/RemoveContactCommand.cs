@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Contacts
 {
     public class RemoveContactCommand
     {
-        public class RemoveContactRequest : IAsyncRequest<RemoveContactResponse>
+        public class RemoveContactRequest : IRequest<RemoveContactResponse>
         {
             public int Id { get; set; }
         }

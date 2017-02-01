@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
 {
     public class GetByNameQuery
     {
-        public class GetByNameRequest : IAsyncRequest<GetByNameResponse>
+        public class GetByNameRequest : IRequest<GetByNameResponse>
         {
             public GetByNameRequest()
             {

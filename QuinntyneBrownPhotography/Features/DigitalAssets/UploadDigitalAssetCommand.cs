@@ -15,7 +15,7 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
 {
     public class UploadDigitalAssetCommand
     {
-        public class UploadDigitalAssetRequest : IAsyncRequest<UploadDigitalAssetResponse>
+        public class UploadDigitalAssetRequest : IRequest<UploadDigitalAssetResponse>
         {
             public InMemoryMultipartFormDataStreamProvider Provider { get; set; }
         }

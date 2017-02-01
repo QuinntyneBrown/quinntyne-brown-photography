@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Catalog
 {
     public class GetProductsQuery
     {
-        public class GetProductsRequest : IAsyncRequest<GetProductsResponse> { }
+        public class GetProductsRequest : IRequest<GetProductsResponse> { }
 
         public class GetProductsResponse
         {

@@ -2,7 +2,7 @@
 
 namespace QuinntyneBrownPhotography.Security
 {
-    public class AuthenticateRequest : IAsyncRequest<AuthenticateResponse>
+    public class AuthenticateRequest : IRequest<AuthenticateResponse>
     {
         public AuthenticateRequest(string username, string password)
         {

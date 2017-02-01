@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Authors
 {
     public class GetAuthorByIdQuery
     {
-        public class GetAuthorByIdRequest : IAsyncRequest<GetAuthorByIdResponse> { 
+        public class GetAuthorByIdRequest : IRequest<GetAuthorByIdResponse> { 
 			public int Id { get; set; }
 		}
 

@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Catalog
 {
     public class RemoveProductCommand
     {
-        public class RemoveProductRequest : IAsyncRequest<RemoveProductResponse>
+        public class RemoveProductRequest : IRequest<RemoveProductResponse>
         {
             public int Id { get; set; }
         }

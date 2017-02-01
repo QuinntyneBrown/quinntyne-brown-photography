@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Orders
 {
     public class RemoveQuoteCommand
     {
-        public class RemoveQuoteRequest : IAsyncRequest<RemoveQuoteResponse>
+        public class RemoveQuoteRequest : IRequest<RemoveQuoteResponse>
         {
             public int Id { get; set; }
         }

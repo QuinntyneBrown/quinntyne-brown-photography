@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.UserManagement
 {
     public class RegisterCommand
     {
-        public class RegisterRequest : IAsyncRequest<RegisterResponse>
+        public class RegisterRequest : IRequest<RegisterResponse>
         {
             public RegisterRequest()
             {

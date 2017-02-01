@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.DigitalAssets
 {
     public class ServeQuery
     {
-        public class ServeRequest : IAsyncRequest<ServeResponse> { }
+        public class ServeRequest : IRequest<ServeResponse> { }
 
         public class ServeResponse
         {

@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Contests
 {
     public class GetContestByIdQuery
     {
-        public class GetContestByIdRequest : IAsyncRequest<GetContestByIdResponse> { 
+        public class GetContestByIdRequest : IRequest<GetContestByIdResponse> { 
 			public int Id { get; set; }
 		}
 

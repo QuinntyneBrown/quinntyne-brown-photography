@@ -18,32 +18,32 @@ namespace QuinntyneBrownPhotography.Features.Blog.Avatars
         [HttpPost]
         [ResponseType(typeof(AddOrUpdateAvatarCommand.AddOrUpdateAvatarResponse))]
         public async Task<IHttpActionResult> Add(AddOrUpdateAvatarCommand.AddOrUpdateAvatarRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         [Route("update")]
         [HttpPut]
         [ResponseType(typeof(AddOrUpdateAvatarCommand.AddOrUpdateAvatarResponse))]
         public async Task<IHttpActionResult> Update(AddOrUpdateAvatarCommand.AddOrUpdateAvatarRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
         
         [Route("get")]
         [AllowAnonymous]
         [HttpGet]
         [ResponseType(typeof(GetAvatarsQuery.GetAvatarsResponse))]
         public async Task<IHttpActionResult> Get()
-            => Ok(await _mediator.SendAsync(new GetAvatarsQuery.GetAvatarsRequest()));
+            => Ok(await _mediator.Send(new GetAvatarsQuery.GetAvatarsRequest()));
 
         [Route("getById")]
         [HttpGet]
         [ResponseType(typeof(GetAvatarByIdQuery.GetAvatarByIdResponse))]
         public async Task<IHttpActionResult> GetById(GetAvatarByIdQuery.GetAvatarByIdRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         [Route("remove")]
         [HttpDelete]
         [ResponseType(typeof(RemoveAvatarCommand.RemoveAvatarResponse))]
         public async Task<IHttpActionResult> Remove(RemoveAvatarCommand.RemoveAvatarRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         protected readonly IMediator _mediator;
 

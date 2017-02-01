@@ -22,7 +22,7 @@ namespace QuinntyneBrownPhotography.Features.UserManagement
         {
             if (!User.Identity.IsAuthenticated)
                 return Ok();
-            return Ok(await _mediator.SendAsync(new GetCurrentUserQuery.GetCurrentUserRequest(User.Identity.Name)));
+            return Ok(await _mediator.Send(new GetCurrentUserQuery.GetCurrentUserRequest(User.Identity.Name)));
         }
         
         protected readonly IMediator _mediator;

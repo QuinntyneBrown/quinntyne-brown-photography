@@ -18,7 +18,7 @@ namespace QuinntyneBrownPhotography.Features.Contacts
         [HttpPost]
         [ResponseType(typeof(AddContactMessageCommand.AddContactMessageResponse))]
         public async Task<IHttpActionResult> AddContactMessage(AddContactMessageCommand.AddContactMessageRequest request) {
-            return Ok(await _mediator.SendAsync(request));
+            return Ok(await _mediator.Send(request));
         }
 
         protected readonly IMediator _mediator;

@@ -10,7 +10,7 @@ namespace QuinntyneBrownPhotography.Features.Customers
 {
     public class GetCustomersQuery
     {
-        public class GetCustomersRequest : IAsyncRequest<GetCustomersResponse> { }
+        public class GetCustomersRequest : IRequest<GetCustomersResponse> { }
 
         public class GetCustomersResponse
         {

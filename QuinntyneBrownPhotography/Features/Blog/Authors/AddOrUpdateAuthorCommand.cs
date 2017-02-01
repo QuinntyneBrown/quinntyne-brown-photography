@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Authors
 {
     public class AddOrUpdateAuthorCommand
     {
-        public class AddOrUpdateAuthorRequest : IAsyncRequest<AddOrUpdateAuthorResponse>
+        public class AddOrUpdateAuthorRequest : IRequest<AddOrUpdateAuthorResponse>
         {
             public AuthorApiModel Author { get; set; }
         }

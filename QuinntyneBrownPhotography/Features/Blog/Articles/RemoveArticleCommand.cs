@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Articles
 {
     public class RemoveArticleCommand
     {
-        public class RemoveArticleRequest : IAsyncRequest<RemoveArticleResponse>
+        public class RemoveArticleRequest : IRequest<RemoveArticleResponse>
         {
             public int Id { get; set; }
         }

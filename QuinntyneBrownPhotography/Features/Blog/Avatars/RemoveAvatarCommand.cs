@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Avatars
 {
     public class RemoveAvatarCommand
     {
-        public class RemoveAvatarRequest : IAsyncRequest<RemoveAvatarResponse>
+        public class RemoveAvatarRequest : IRequest<RemoveAvatarResponse>
         {
             public int Id { get; set; }
         }

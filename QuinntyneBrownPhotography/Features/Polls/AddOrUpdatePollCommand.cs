@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Polls
 {
     public class AddOrUpdatePollCommand
     {
-        public class AddOrUpdatePollRequest : IAsyncRequest<AddOrUpdatePollResponse>
+        public class AddOrUpdatePollRequest : IRequest<AddOrUpdatePollResponse>
         {
             public PollApiModel Poll { get; set; }
         }

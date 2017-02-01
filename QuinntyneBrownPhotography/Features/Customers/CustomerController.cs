@@ -17,32 +17,32 @@ namespace QuinntyneBrownPhotography.Features.Customers
         [HttpPost]
         [ResponseType(typeof(AddOrUpdateCustomerCommand.AddOrUpdateCustomerResponse))]
         public async Task<IHttpActionResult> Add(AddOrUpdateCustomerCommand.AddOrUpdateCustomerRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         [Route("update")]
         [HttpPut]
         [ResponseType(typeof(AddOrUpdateCustomerCommand.AddOrUpdateCustomerResponse))]
         public async Task<IHttpActionResult> Update(AddOrUpdateCustomerCommand.AddOrUpdateCustomerRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
         
         [Route("get")]
         [AllowAnonymous]
         [HttpGet]
         [ResponseType(typeof(GetCustomersQuery.GetCustomersResponse))]
         public async Task<IHttpActionResult> Get()
-            => Ok(await _mediator.SendAsync(new GetCustomersQuery.GetCustomersRequest()));
+            => Ok(await _mediator.Send(new GetCustomersQuery.GetCustomersRequest()));
 
         [Route("getById")]
         [HttpGet]
         [ResponseType(typeof(GetCustomerByIdQuery.GetCustomerByIdResponse))]
         public async Task<IHttpActionResult> GetById(GetCustomerByIdQuery.GetCustomerByIdRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         [Route("remove")]
         [HttpDelete]
         [ResponseType(typeof(RemoveCustomerCommand.RemoveCustomerResponse))]
         public async Task<IHttpActionResult> Remove(RemoveCustomerCommand.RemoveCustomerRequest request)
-            => Ok(await _mediator.SendAsync(request));
+            => Ok(await _mediator.Send(request));
 
         private IMediator _mediator;
     }

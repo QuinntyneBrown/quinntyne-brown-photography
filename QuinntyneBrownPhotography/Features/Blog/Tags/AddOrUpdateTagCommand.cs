@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Blog.Tags
 {
     public class AddOrUpdateTagCommand
     {
-        public class AddOrUpdateTagRequest : IAsyncRequest<AddOrUpdateTagResponse>
+        public class AddOrUpdateTagRequest : IRequest<AddOrUpdateTagResponse>
         {
             public TagApiModel Tag { get; set; }
         }

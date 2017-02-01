@@ -11,7 +11,7 @@ namespace QuinntyneBrownPhotography.Features.Contests
 {
     public class AddOrUpdateContestEntryCommand
     {
-        public class AddOrUpdateContestEntryRequest : IAsyncRequest<AddOrUpdateContestEntryResponse>
+        public class AddOrUpdateContestEntryRequest : IRequest<AddOrUpdateContestEntryResponse>
         {
             public ContestEntryApiModel ContestEntry { get; set; }
         }
