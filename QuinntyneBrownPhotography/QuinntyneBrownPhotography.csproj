@@ -409,6 +409,8 @@
     <Compile Include="Features\Notifications\SendNotificationCommand.cs" />
     <Compile Include="Features\Notifications\SmtpConfiguration.cs" />
     <Compile Include="Features\Notifications\ISmtpConfiguration.cs" />
+    <Compile Include="Features\Payments\StripeConfiguration.cs" />
+    <Compile Include="Features\Payments\IStripeConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
