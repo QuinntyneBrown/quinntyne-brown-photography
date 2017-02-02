@@ -31,7 +31,7 @@ namespace QuinntyneBrownPhotography.Features.Contests
         [HttpGet]
         [ResponseType(typeof(GetContestEntriesQuery.GetContestEntriesResponse))]
         public async Task<IHttpActionResult> Get()
-            => Ok(await _mediator.Send(new GetContestEntriesQuery.GetContestEntrysRequest()));
+            => Ok(await _mediator.Send(new GetContestEntriesQuery.GetContestEntriesRequest()));
 
         [Route("getById")]
         [HttpGet]

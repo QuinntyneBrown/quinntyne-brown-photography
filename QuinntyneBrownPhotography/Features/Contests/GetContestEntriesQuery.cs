@@ -10,14 +10,14 @@ namespace QuinntyneBrownPhotography.Features.Contests
 {
     public class GetContestEntriesQuery
     {
-        public class GetContestEntrysRequest : IRequest<GetContestEntriesResponse> { }
+        public class GetContestEntriesRequest : IRequest<GetContestEntriesResponse> { }
 
         public class GetContestEntriesResponse
         {
             public ICollection<ContestEntryApiModel> ContestEntries { get; set; } = new HashSet<ContestEntryApiModel>();
         }
 
-        public class GetContestEntriesHandler : IAsyncRequestHandler<GetContestEntrysRequest, GetContestEntriesResponse>
+        public class GetContestEntriesHandler : IAsyncRequestHandler<GetContestEntriesRequest, GetContestEntriesResponse>
         {
             public GetContestEntriesHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
             {
@@ -25,7 +25,7 @@ namespace QuinntyneBrownPhotography.Features.Contests
                 _cache = cache;
             }
 
-            public async Task<GetContestEntriesResponse> Handle(GetContestEntrysRequest request)
+            public async Task<GetContestEntriesResponse> Handle(GetContestEntriesRequest request)
             {
                 var contestEntries = await _dataContext.ContestEntries.ToListAsync();
                 return new GetContestEntriesResponse()

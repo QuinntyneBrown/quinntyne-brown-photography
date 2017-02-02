@@ -318,6 +318,9 @@
     <TypeScriptCompile Include="src\app\tenants\tenant.service.ts" />
     <TypeScriptCompile Include="src\app\user-management\user.service.ts" />
     <TypeScriptCompile Include="src\app\user-management\role.service.ts" />
+    <TypeScriptCompile Include="src\app\search\search.service.ts" />
+    <TypeScriptCompile Include="src\app\polls\poll-answer.service.ts" />
+    <TypeScriptCompile Include="src\app\polls\poll-answer.model.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

@@ -27,10 +27,10 @@ namespace QuinntyneBrownPhotography.Features.PhotoGalleries
 
             public async Task<GetPhotoGalleriesResponse> Handle(GetPhotoGalleriesRequest request)
             {
-                var photoGallerys = await _dataContext.PhotoGalleries.ToListAsync();
+                var photoGalleries = await _dataContext.PhotoGalleries.ToListAsync();
                 return new GetPhotoGalleriesResponse()
                 {
-                    PhotoGalleries = photoGallerys.Select(x => PhotoGalleryApiModel.FromPhotoGallery(x)).ToList()
+                    PhotoGalleries = photoGalleries.Select(x => PhotoGalleryApiModel.FromPhotoGallery(x)).ToList()
                 };
             }
 
