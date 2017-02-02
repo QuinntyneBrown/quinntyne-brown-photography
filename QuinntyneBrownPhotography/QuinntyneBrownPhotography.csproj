@@ -214,6 +214,8 @@
   <ItemGroup>
     <Compile Include="ApiConfiguration.cs" />
     <Compile Include="Features\Customers\CustomerController.cs" />
+    <Compile Include="Features\Notifications\IMessageSender.cs" />
+    <Compile Include="Features\Notifications\SmtpClient.cs" />
     <Compile Include="Features\Search\GetSearchResultsQuery.cs" />
     <Compile Include="Features\Search\GetSuggestResultsQuery.cs" />
     <Compile Include="Features\Search\ISearchConfiguration.cs" />
@@ -405,6 +407,8 @@
     <Compile Include="Features\Payments\ProcessPaymentCommand.cs" />
     <Compile Include="Features\Notifications\NotificationController.cs" />
     <Compile Include="Features\Notifications\SendNotificationCommand.cs" />
+    <Compile Include="Features\Notifications\SmtpConfiguration.cs" />
+    <Compile Include="Features\Notifications\ISmtpConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
