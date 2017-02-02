@@ -134,8 +134,16 @@
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp, Version=105.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="StackExchange.Redis, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\StackExchange.Redis.1.2.0\lib\net45\StackExchange.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stripe, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.1.12.0\lib\net40\Stripe.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
@@ -167,6 +175,7 @@
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
       <Private>True</Private>
@@ -286,7 +295,6 @@
     <Compile Include="Features\Polls\PollQuestionController.cs" />
     <Compile Include="Features\Polls\PollAnswerController.cs" />
     <Compile Include="Features\Polls\AddOrUpdatePollCommand.cs" />
-    <Compile Include="Features\Polls\AddOrUpdatePollQuestionCommand.cs" />
     <Compile Include="Features\Customers\AddOrUpdateCustomerCommand.cs" />
     <Compile Include="Data\Models\Quote.cs" />
     <Compile Include="Data\Models\Order.cs" />
@@ -384,6 +392,19 @@
     <Compile Include="Data\Models\Photographer.cs" />
     <Compile Include="Data\Models\Photo.cs" />
     <Compile Include="Data\Models\PhotoGallery.cs" />
+    <Compile Include="Features\Polls\AddOrUpdatePollRespondentCommand.cs" />
+    <Compile Include="Features\Polls\GetPollRespondentsQuery.cs" />
+    <Compile Include="Features\Polls\GetPollRespondentByIdQuery.cs" />
+    <Compile Include="Features\Polls\RemovePollRespondentCommand.cs" />
+    <Compile Include="Features\Polls\PollRespondentController.cs" />
+    <Compile Include="Features\Polls\AddOrUpdatePollQuestionCommand.cs" />
+    <Compile Include="Features\Polls\GetPollQuestionsQuery.cs" />
+    <Compile Include="Features\Polls\GetPollQuestionByIdQuery.cs" />
+    <Compile Include="Features\Polls\RemovePollQuestionCommand.cs" />
+    <Compile Include="Features\Payments\PaymentController.cs" />
+    <Compile Include="Features\Payments\ProcessPaymentCommand.cs" />
+    <Compile Include="Features\Notifications\NotificationController.cs" />
+    <Compile Include="Features\Notifications\SendNotificationCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

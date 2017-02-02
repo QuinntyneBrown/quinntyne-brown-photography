@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
-import { ContactMessage } from "./contactMessage.model";
+import { ContactMessage } from "./contact-message.model";
 import { Observable } from "rxjs";
 
 

@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
-import { DigitalAsset } from "./digitalAsset.model";
+import { DigitalAsset } from "./digital-asset.model";
 import { Observable } from "rxjs";
 
 

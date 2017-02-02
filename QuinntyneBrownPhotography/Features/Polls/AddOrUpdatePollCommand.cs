@@ -1,10 +1,7 @@
 using MediatR;
 using QuinntyneBrownPhotography.Data;
 using QuinntyneBrownPhotography.Data.Models;
-using QuinntyneBrownPhotography.Utilities;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Linq;
 using System.Data.Entity;
 
 namespace QuinntyneBrownPhotography.Features.Polls
@@ -16,17 +13,13 @@ namespace QuinntyneBrownPhotography.Features.Polls
             public PollApiModel Poll { get; set; }
         }
 
-        public class AddOrUpdatePollResponse
-        {
-
-        }
+        public class AddOrUpdatePollResponse { }
 
         public class AddOrUpdatePollHandler : IAsyncRequestHandler<AddOrUpdatePollRequest, AddOrUpdatePollResponse>
         {
-            public AddOrUpdatePollHandler(QuinntyneBrownPhotographyDataContext dataContext, ICache cache)
+            public AddOrUpdatePollHandler(QuinntyneBrownPhotographyDataContext dataContext)
             {
                 _dataContext = dataContext;
-                _cache = cache;
             }
 
             public async Task<AddOrUpdatePollResponse> Handle(AddOrUpdatePollRequest request)
@@ -37,14 +30,10 @@ namespace QuinntyneBrownPhotography.Features.Polls
                 entity.Name = request.Poll.Name;
                 await _dataContext.SaveChangesAsync();
 
-                return new AddOrUpdatePollResponse()
-                {
-
-                };
+                return new AddOrUpdatePollResponse() { };
             }
 
             private readonly QuinntyneBrownPhotographyDataContext _dataContext;
-            private readonly ICache _cache;
         }
 
     }
