@@ -209,30 +209,6 @@
     <Content Include="src\app\about\about-page.component.scss">
       <DependentUpon>about-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\admin\admin-header.component.html">
-      <DependentUpon>admin-header.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\admin\admin-header.component.scss">
-      <DependentUpon>admin-header.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\admin\admin-page.component.html">
-      <DependentUpon>admin-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\admin\admin-page.component.scss">
-      <DependentUpon>admin-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\admin\blog\article-edit-page.component.html">
-      <DependentUpon>article-edit-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\admin\blog\article-edit-page.component.scss">
-      <DependentUpon>article-edit-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\admin\digital-assets\upload-page.component.html">
-      <DependentUpon>upload-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\admin\digital-assets\upload-page.component.scss">
-      <DependentUpon>upload-page.component.ts</DependentUpon>
-    </Content>
     <Content Include="src\app\app-header.component.html">
       <DependentUpon>app-header.component.ts</DependentUpon>
     </Content>
@@ -281,11 +257,11 @@
     <Content Include="src\app\login\login-page.component.scss">
       <DependentUpon>login-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\page-not-found-page.component.html">
-      <DependentUpon>page-not-found-page.component.ts</DependentUpon>
+    <Content Include="src\app\not-found-page.component.html">
+      <DependentUpon>not-found-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\page-not-found-page.component.scss">
-      <DependentUpon>page-not-found-page.component.ts</DependentUpon>
+    <Content Include="src\app\not-found-page.component.scss">
+      <DependentUpon>not-found-page.component.ts</DependentUpon>
     </Content>
     <Content Include="tsconfig.json" />
     <Content Include="src\styles\_breakpoints.scss" />
@@ -334,8 +310,6 @@
     <TypeScriptCompile Include="src\app\shared\index.ts" />
     <TypeScriptCompile Include="src\app\landing\landing-page.component.ts" />
     <TypeScriptCompile Include="src\app\landing\index.ts" />
-    <TypeScriptCompile Include="src\app\admin\admin.module.ts" />
-    <TypeScriptCompile Include="src\app\admin\index.ts" />
     <TypeScriptCompile Include="src\app\landing\landing.module.ts" />
     <TypeScriptCompile Include="src\app\login\login-page.component.ts" />
     <TypeScriptCompile Include="src\app\login\login.module.ts" />
@@ -347,35 +321,17 @@
     <TypeScriptCompile Include="src\app\about\about-page.component.ts" />
     <TypeScriptCompile Include="src\app\about\about.module.ts" />
     <TypeScriptCompile Include="src\app\about\index.ts" />
-    <TypeScriptCompile Include="src\app\admin\admin-page.component.ts" />
-    <TypeScriptCompile Include="src\app\admin\blog\article-edit-page.component.ts" />
-    <TypeScriptCompile Include="src\app\admin\blog\article.service.ts" />
-    <TypeScriptCompile Include="src\app\admin\blog\index.ts" />
-    <TypeScriptCompile Include="src\app\admin\blog\article.model.ts" />
-    <TypeScriptCompile Include="src\app\admin\catalog\index.ts" />
-    <TypeScriptCompile Include="src\app\admin\catalog\product.model.ts" />
-    <TypeScriptCompile Include="src\app\admin\catalog\product.service.ts" />
     <TypeScriptCompile Include="src\app\shared\api.service.ts" />
     <TypeScriptCompile Include="src\app\catalog\catalog.module.ts" />
-    <TypeScriptCompile Include="src\app\admin\digital-assets\index.ts" />
-    <TypeScriptCompile Include="src\app\admin\digital-assets\upload-page.component.ts" />
     <TypeScriptCompile Include="src\app\contact\contact-page.component.ts" />
     <TypeScriptCompile Include="src\app\contact\contact.module.ts" />
     <TypeScriptCompile Include="src\app\contact\index.ts" />
     <TypeScriptCompile Include="src\app\contest\contest-entry-page.component.ts" />
     <TypeScriptCompile Include="src\app\contest\index.ts" />
     <TypeScriptCompile Include="src\app\contest\contest.module.ts" />
-    <TypeScriptCompile Include="src\app\admin\blog\tag.model.ts" />
-    <TypeScriptCompile Include="src\app\admin\blog\tag.service.ts" />
-    <TypeScriptCompile Include="src\app\admin\digital-assets\digital-asset.service.ts" />
-    <TypeScriptCompile Include="src\app\page-not-found-page.component.ts" />
     <TypeScriptCompile Include="src\app\blog\blog.module.ts" />
     <TypeScriptCompile Include="src\app\app-header.component.ts" />
-    <TypeScriptCompile Include="src\app\admin\users\user.service.ts" />
-    <TypeScriptCompile Include="src\app\admin\users\user.module.ts" />
-    <TypeScriptCompile Include="src\app\admin\users\index.ts" />
-    <TypeScriptCompile Include="src\app\admin\users\user.model.ts" />
-    <TypeScriptCompile Include="src\app\admin\admin-header.component.ts" />
+    <TypeScriptCompile Include="src\app\not-found-page.component.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

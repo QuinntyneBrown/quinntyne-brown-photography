@@ -29,9 +29,9 @@ namespace QuinntyneBrownPhotography.Features.PhotoGalleries
         [Route("get")]
         [AllowAnonymous]
         [HttpGet]
-        [ResponseType(typeof(GetPhotoGallerysQuery.GetPhotoGallerysResponse))]
+        [ResponseType(typeof(GetPhotoGalleriesQuery.GetPhotoGalleriesResponse))]
         public async Task<IHttpActionResult> Get()
-            => Ok(await _mediator.Send(new GetPhotoGallerysQuery.GetPhotoGallerysRequest()));
+            => Ok(await _mediator.Send(new GetPhotoGalleriesQuery.GetPhotoGalleriesRequest()));
 
         [Route("getById")]
         [HttpGet]

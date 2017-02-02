@@ -31,10 +31,6 @@ export const routes: Routes = [
     {
         path: 'product/:slug',
         component: ProductPageComponent
-    },
-    {
-        path: 'login',
-        component: LoginPageComponent
     }
 ];
 
